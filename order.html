@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/order.css">
+  <title>BookShop - Đặt hàng</title>
+</head>
+
+<body>
+  <!-- bannertop -->
+  <div class="top-banner">
+    <img src="/img/bander/hoisachheartop.jpg" alt="">
+  </div>
+  <!-- header -->
+  <div class="header">
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <a href="./index.html"><img src="/img/logo/fahasa_logo.png" alt="BookShop"></a>
+        </div>
+        <div class="search">
+          <form action="#" method="get">
+            <input type="text" name="search" autocomplete="off" placeholder="Tìm kiếm...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="cart">
+          <a href="./cart.html">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <div class="login">
+          <a href="./login.html">Đăng nhập</a>
+        </div>
+      </div>
+      <div class="header-footer">
+        <nav>
+          <ul>
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./index.html">Sách</a></li>
+            <li><a href="./index.html">Thể loại</a></li>
+            <li><a href="./about.html">Về chúng tôi</a></li>
+            <li><a href="#">Tin tức 24h</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!-- -->
+
+  <body>
+    <div class="container-order">
+      <section class="shipping-address">
+        <h3>
+          ĐỊA CHỈ GIAO HÀNG
+        </h3>
+        <div class="checkout_block_content">
+          <div class="checkout_block_address_block">
+            <div class="input-box" data-selected="true" data-label-id="0">
+              <label data-selected="true" data-label-id="0">Họ Và Tên</label>
+              <div class="input-item">
+                <div class="input-groupp">
+                  <input class="textbox " type="text" validate_type="fullname" placeholder="Nhập Họ và tên"
+                    id="shipping_fullname" name="fullname" value="" maxlength="100" fdprocessedid="wzc2m">
+                  <input type="hidden" id="shipping_firstname" name="firstname" value="">
+                  <input type="hidden" id="shipping_lastname" name="lastname" value="">
+                </div>
+              </div>
+            </div>
+            <div class="input-box ">
+              <label>Email</label>
+              <div class="input-item">
+                <div class="input-groupp">
+                  <input class="textbox " type="text" validate_type="email" placeholder="Nhập Email" id="shipping_email"
+                    name="email" value="" maxlength="200" fdprocessedid="3vpv3t">
+                </div>
+              </div>
+            </div>
+            <div class="input-box ">
+              <label>Phone number</label>
+              <div class="input-item">
+                <div class="input-groupp">
+                  <input class="textbox " type="text" validate_type="shipping_telephone"
+                    placeholder="Nhập số điện thoại" id="shipping_telephone" name="telephone" value="" maxlength="10"
+                    fdprocessedid="28kzy">
+                </div>
+              </div>
+            </div>
+            <div class="input-box detailed-address">
+              <label> Tỉnh thành </label>
+              <select name="" id="province">
+                <option value="-1">Chọn tỉnh thành</option>
+              </select>
+              <br>
+              <label> Quận huyện </label>
+              <select name="" id="district">
+                <option value="-1">Chọn quận/huyện</option>
+              </select>
+              <br>
+              <label> Phường xã </label>
+              <select name="" id="town">
+                <option value="-1">Chọn phường/xã</option>
+              </select>
+            </div>
+            <div class="input-box ">
+              <label>Địa chỉ nhận hàng</label>
+              <div class="input-item">
+                <div class="input-groupp">
+                  <input class="textbox " type="text" validate_type="text" placeholder="Nhập địa chỉ nhận hàng"
+                    id="shipping_street" name="street" value="" maxlength="200" fdprocessedid="x3dcw">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="shipping-method">
+        <h3>
+          PHƯƠNG PHÁP VẬN CHUYỂN
+        </h3>
+        <div class="checkout_block_content">
+          <div class="checkout_block_radio_list">
+            <div>
+              <ul id="checkout_shippingmethod" class="checkout_block_radio_list_items">
+                <li class="checkout_block_radio_list_item">
+                  <input type="radio" class="radio-big" id="radio-big" name="radio-groupp" checked>
+                  <label for="test">
+                    <div class="update-shipping-method">
+                      <div style="font-weight: 600;">Giao hàng tiêu chuẩn: 30.000 đ</div>
+                      <div>Wednesday - 01/03</div>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </section>
+      <section class="payment-method">
+        <h3>
+          PHƯƠNG THỨC THANH TOÁN
+        </h3>
+        <div class="checkout_block_content">
+          <div class="checkout_block_radio_list">
+            <div>
+              <ul id="checkout_paymentmethod" class="checkout_block_radio_list_items">
+                <li class="checkout_block_radio_list_item zalopayapp">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_zalopayapp">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big1" name="radio-group" value="zalopayapp">
+                      <label class="radio-big raido-big-with-icon" for="radio-big1">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_zalopayapp.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_zalopayapp"
+                            name="checkout_paymentmethod_option" class="checkout_paymentmethod_option"
+                            value="zalopayapp"> -->
+                          <div class="payment-name">Ví ZaloPay</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="checkout_block_radio_list_item mocapay">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_mocapay">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big2" name="radio-group" value="mocapay">
+                      <label class="radio-big raido-big-with-icon" for="radio-big2">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_mocapay.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <div class="payment-name">Ví Moca trên Ứng dụng Grab</div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_mocapay" name="checkout_paymentmethod_option"
+                            class="checkout_paymentmethod_option" value="mocapay"> -->
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="checkout_block_radio_list_item vnpay">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_vnpay">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big3" name="radio-group" value="vnpay">
+                      <label class="radio-big raido-big-with-icon" for="radio-big3">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_vnpay.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <div class="payment-name">VNPAY</div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_vnpay" name="checkout_paymentmethod_option"
+                            class="checkout_paymentmethod_option" value="vnpay"> -->
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="checkout_block_radio_list_item airpay">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_airpay">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big4" name="radio-group" value="airpay">
+                      <label class="radio-big raido-big-with-icon" for="radio-big4">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_airpay.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <div class="payment-name">Ví ShopeePay</div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_airpay" name="checkout_paymentmethod_option"
+                            class="checkout_paymentmethod_option" value="airpay"> -->
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="checkout_block_radio_list_item momopay">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_momopay">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big5" name="radio-group" value="momopay">
+                      <label class="radio-big raido-big-with-icon" for="radio-big5">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_momopay.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <div class="payment-name">Ví Momo</div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_momopay" name="checkout_paymentmethod_option"
+                            class="checkout_paymentmethod_option" value="momopay"> -->
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="checkout_block_radio_list_item zalopayatm">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_zalopayatm">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big6" name="radio-group" value="zalopayatm">
+                      <label class="radio-big raido-big-with-icon" for="radio-big6">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_zalopayatm.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <div class="payment-name">ATM / Internet Banking</div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_zalopayatm"
+                            name="checkout_paymentmethod_option" class="checkout_paymentmethod_option"
+                            value="zalopayatm"> -->
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="checkout_block_radio_list_item zalopaycc">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_zalopaycc">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big7" name="radio-group" value="zalopaycc">
+                      <label class="radio-big raido-big-with-icon" for="radio-big7">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_zalopaycc.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <div class="payment-name">Visa / Master / JCB</div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_zalopaycc" name="checkout_paymentmethod_option"
+                            class="checkout_paymentmethod_option" value="zalopaycc"> -->
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="checkout_block_radio_list_item cashondelivery">
+                  <div class="checkout_paymentmethod_with_tutorial" id="tutorial_cashondelivery">
+                    <div class="radio-big-with-icon-container">
+                      <input type="radio" class="radio-big" id="radio-big8" name="radio-group" value="cashondelivery"
+                        checked>
+                      <label class="radio-big raido-big-with-icon" for="radio-big8">
+                        <div class="payment-name-with-icon-container">
+                          <div
+                            style="background: url(https://cdn0.fahasa.com/skin/frontend/base/default/images/payment_icon/ico_cashondelivery.svg?q=102046) no-repeat center center;width: 40px; border: 1px solid;">
+                          </div>
+                          <div class="payment-name">Thanh toán khi giao hàng</div>
+                          <!-- <input type="radio" id="checkout_paymentmethod_cashondelivery"
+                            name="checkout_paymentmethod_option" class="checkout_paymentmethod_option"
+                            value="cashondelivery" checked="checked"> -->
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="promotion-code-gift">
+        <h3>
+          MÃ KHUYẾN MẠI/MÃ QUÀ TẶNG
+        </h3>
+        <div class="checkout_block_content">
+          <div class="checkout_block_address_block">
+            <div class="input-group-horizontal-coupon">
+              <label>Mã giảm giá</label>
+              <div class="input-item-code">
+                <div class="input-group-code">
+                  <input class="textbox-code checkout_coupon" type="text" validate_type="text"
+                    placeholder="Nhập mã giảm giá" id="checkout_coupon" name="coupon" value="" maxlength="200"
+                    fdprocessedid="aitd9j">
+                  <span id="checkout_btn_coupon" class="input-icon">Áp dụng</span>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="check-order-again">
+        <h3>
+          KIỂM TRA LẠI ĐƠN HÀNG
+        </h3>
+        <div class="checkout_block_content">
+          <div id="checkout_products" class="checkout_products">
+            <div class="checkout_products_item">
+              <div class="checkout_products_item_img">
+                <img class="img-order" src="https://cdn0.fahasa.com/media/catalog/product//t/d/tdcsvnsh.jpg">
+              </div>
+              <div class="checkout_products_item_detail">
+                <div class="checkout_products_item_name"> Thay Đổi Cuộc Sống Với Nhân Số Học</div>
+                <div class="checkout_products_item_price">173.600 đ</div>
+                <div class="checkout_products_item_qty">1</div>
+                <div class="checkout_products_item_total">173.600 đ</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="checkout_total checkout_total_mobile">
+              <div class="checkout_total_subtotal">
+                <div>tổng phụ</div>
+                <div>173.600 đ</div>
+              </div>
+              <div class="checkout_total_shipping">
+                <div>Shipping &amp; Handling (Giao hàng tiêu chuẩn)</div>
+                <div>30.000 đ</div>
+              </div>
+              <div class="checkout_total_grand_total">
+                <div>Grand Total</div>
+                <div>203.600 đ</div>
+              </div>
+            </div> -->
+          <div class="container-order-footer">
+            <div class="checkout_total">
+              <div class="checkout_total_text">
+                <div>Tạm tổng : </div>
+                <div>Phí giao hàng : </div>
+                <div>Tổng cộng : </div>
+              </div>
+              <div class="checkout_total_number">
+                <div class="total_subtotal">173.600 đ</div>
+                <div class="total_shipping">30.000 đ</div>
+                <div class="grand_total">203.600 đ</div>
+              </div>
+            </div>
+            <div class="checkout_bottom">
+              <div class="checkout-cart">
+                <div><a href="/cart.html"><span style="padding-right: 8px;">
+                      <img
+                        src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=102046"></span>
+                    <span>Quay lại giỏ hàng</span></a></div>
+              </div>
+              <div>
+                <div class="btn-box">
+                  <button type="button" title="Order Confirmation" class="btn-confirm"
+                    fdprocessedid="6mr4vr"><span>Xác nhận đặt hàng</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-distributed">
+      <div class="footer-left">
+        <img class="img-footer" src="./img/logo/fahasa_logo.png" alt="Logo"> <br>
+        <span>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60 - 62 Lê Lợi,
+          Quận 1, TP. HCM, Việt Nam</span><br>
+        <span>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại
+          văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</span>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-center">
+        <div class="info">
+          Liên hệ
+        </div>
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>62 Lê Lợi, Quận 1, TP. HCM</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+84 826726045</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="useful-links">
+          Liên kết
+        </div>
+        <div class="list-links">
+          <a href="">Trang chủ</a>
+          <a href="">Về chúng thôi</a>
+          <a href="">Tin tức 24h</a>
+          <a href="">Liên hệ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+  <!-- link js -->
+  <script src="/js/script.js"></script>
+  <script src="/paging/paging.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="/json/data.json"></script>
+  <script src="/js/order.js"></script>
+  <script src="/js/cart.js"></script>
+
+</body>
+
+</html>

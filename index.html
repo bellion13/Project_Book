@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/paging.css">
+  <title>BookShop - Trang chủ</title>
+</head>
+
+<body>
+  <!-- bannertop -->
+  <div class="top-banner">
+    <img src="/img/bander/hoisachheartop.jpg" alt="">
+  </div>
+  <!-- header -->
+  <div class="header">
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <a href="./index.html"><img src="/img/logo/fahasa_logo.png" alt="BookShop"></a>
+        </div>
+        <div class="search">
+          <form action="#" method="get">
+            <input type="text" name="search" autocomplete="off" placeholder="Tìm kiếm...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="cart">
+          <a href="./cart.html">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <div class="login">
+          <a href="./login.html">Đăng nhập</a>
+        </div>
+      </div>
+      <div class="header-footer">
+        <nav>
+          <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#books">Sách</a></li>
+            <li><a href="#categorys">Thể loại</a></li>
+            <li><a href="./about.html">Về chúng tôi</a></li>
+            <li><a href="#">Tin tức 24h</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="main">
+    <!-- bannner -->
+    <div class="banner">
+      <a href="#"><img class="banner-img" src="/img/bander/FahasaT3_T323_Banner_840x320.jpg" alt="Banner"></a>
+    </div>
+    <!-- sách bán chạy -->
+    <section class="best-sellers">
+      <p class="book-hot">SÁCH BÁN CHẠY</p>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="/img/sachbanchay/bluelock.jpg" alt="Book 1">
+            <p>BlueLock</p>
+            <p class="price-book">100.000đ</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/img/sachbanchay/dacnhantam.jpg" alt="Book 1">
+            <p>Đắc nhân tâm</p>
+            <p class="price-book">100.000đ</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/img/sachbanchay/untitledthaotungtamly.jpg" alt="Book 1">
+            <p>Thuật thao túng tâm lý</p>
+            <p class="price-book">100.000đ</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/img/sachbanchay/tamlyhocjtoipham.jpg" alt="Book 2">
+            <p>Tâm lý học tội phạm</p>
+            <p class="price-book">200.000đ</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/img/sachbanchay/thientaibentraikedienbenphai.jpg" alt="Book 3">
+            <p>Thiên tài bên trái kẻ điên bên phải</p>
+            <p class="price-book">150.000đ</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!--  sản phẩm tương tự -->
+    <section id="categorys" class="categories">
+      <h2 class="book-category">Thể loại sách</h2>
+      <ul class="list-category">
+        <li>
+          <a href="#"><img src="/img/sachbanchay/bluelock.jpg" alt="">Manga</a>
+        </li>
+        <li>
+          <a href="#"><img src="/img/loaisach/vanhocc.jpg" alt="">Văn học</a>
+        </li>
+        <li>
+          <a href="#"><img src="/img/loaisach/tieuthuyet.jpg" alt="">Light Novel</a>
+        </li>
+        <li>
+          <a href="#"><img src="/img/loaisach/lichsu.jpg" alt="">Lịch sử</a>
+        </li>
+        <li>
+          <a href="#"><img src="/img/loaisach/tamlyhoc.jpg" alt="">Tâm lý học</a>
+        </li>
+        <li>
+          <a href="#"><img src="/img/loaisach/tamlinh.jpg" alt="">Tâm linh</a>
+        </li>
+        <li>
+          <a href="#"><img src="/img/loaisach/dautu.jpg" alt="">Đầu tư</a>
+        </li>
+        <li>
+          <a href="#"><img src="/img/loaisach/luyenthi.jpg" alt="">Sách luyện thi</a>
+        </li>
+      </ul>
+    </section>
+    <!-- sách : danh sách sách -->
+    <section id="books" class="list-book">
+      <h2 class="h2-book">Sách</h2>
+      <div class="logic-search-sort">
+        <!-- tìm kiếm theo tên -->
+        <input class="inputx" type="text" name="search" value="" id="searchh" placeholder="Tìm kiếm..."
+          autocomplete="off">
+        <!-- sắp xếp theo A - Z -->
+        <select class="select-sort" onchange="sort()" name="" id="sort">
+          <option value="0">
+            Sắp xếp theo
+          </option>
+          <option value="1">
+            Sắp xếp từ A - Z
+          </option>
+          <option value="2">
+            Sắp xếp từ Z - A
+          </option>
+        </select>
+      </div>
+      <ul class="book-list">
+        <!-- api home -->
+      </ul>
+      <!-- phân trang -->
+      <div class="pagination">
+        <a href="#" class="prev">&laquo;</a>
+        <a href="#" class="page active">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page">4</a>
+        <a href="#" class="page">5</a>
+        <a href="#" class="next">&raquo;</a>
+      </div>
+    </section>
+    <!--  đánh giá -->
+    <section class="reviews">
+      <div class="book-review">
+        <h3 class="review-title">Đánh giá</h3>
+        <div class="review">
+          <div class="review-header">
+            <span class="reviewer-name">Tài</span>
+            <span class="review-date">Ngày 13/02/2002</span>
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="review-comment">Nhiều sách hay bổ ích và đáng giá với đông tiền</p>
+        </div>
+        <div class="review">
+          <div class="review-header">
+            <span class="reviewer-name">Trọng Tuấn</span>
+            <span class="review-date">Ngày 13/02/1999</span>
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <p class="review-comment">Nhiều sách hay vãi lìn , nhưng thích cho 4 sao</p>
+        </div>
+        
+      </div>
+
+    </section>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-distributed">
+      <div class="footer-left">
+        <img class="img-footer" src="./img/logo/fahasa_logo.png" alt="Logo"> <br>
+        <span>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60 - 62 Lê Lợi,
+          Quận 1, TP. HCM, Việt Nam</span><br>
+        <span>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại
+          văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</span>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-center">
+        <div class="info">
+          Liên hệ
+        </div>
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>62 Lê Lợi, Quận 1, TP. HCM</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p><a href="tel:082672045">0826726045</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="useful-links">
+          Liên kết
+        </div>
+        <div class="list-links">
+          <a href="">Trang chủ</a>
+          <a href="">Về chúng thôi</a>
+          <a href="">Tin tức 24h</a>
+          <a href="">Liên hệ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+
+  <!-- link js -->
+  <script src="/js/script.js"></script>
+  <script src="/paging/paging.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+
+</html>

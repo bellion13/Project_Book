@@ -1,0 +1,626 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.main {
+  width: 70%;
+  /* max-width: 1200px; */
+  
+}
+
+.top-banner img {
+  max-width: 60%;
+}
+
+.top-banner {
+  height: 50px;
+  background-color: #f8e07f;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.header {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+header {
+  /* height: 68px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  flex-direction: column;
+
+}
+.header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header nav li {
+  display: block;
+  padding: 0 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+.header nav a:hover {
+  color: red;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+
+}
+.header-footer {
+  height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search {
+  border: 1px solid #3333;
+  border-radius: 5px;
+  width: 50%;
+
+
+}
+.search input[type="text"] {
+      padding: 10px;
+      outline: none;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 84%;
+
+}
+
+.search button {
+  float: right;
+  margin-right: 2px;
+  margin-top: 2px;
+  border: none;
+  padding: 8px 12px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.search button:hover {
+  color: red;
+}
+.cart-icon {
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 1.5rem;
+	color: #333;
+  }
+  .cart-icon:hover {
+    color: red;
+  }
+  .cart-icon i {
+	display: block;
+  }
+  .cart-count {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	min-width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #f44336;
+	color: #fff;
+	font-size: 0.8rem;
+	line-height: 16px;
+	text-align: center;
+  }
+/*  */
+.login {
+  /* margin-left: 46px; */
+  align-items: center;
+  background-color: #087bff;
+  padding: 7px;
+  border-radius: 5px;
+
+}
+.login a{
+  color:white;
+  text-decoration: none;
+}
+.login:hover {
+  background-color: #1adb4a;
+}
+/*  banner */
+.banner {
+  margin-top: 15px;
+}
+.banner-img {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* sách bán chạy */
+.book-hot {
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid #3333;
+  justify-content: center;
+  
+  font-weight: 550;
+  background-color: #ffa1ff;
+  border-radius: 8px 8px 0 0;
+  font-size: 24px;
+}
+
+.best-sellers {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.best-sellers ul {
+  list-style: none;
+  padding: 8px 20px;
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(5, minmax(0, 3fr));
+  border-top: 1px solid #f1f1f1;
+  grid-gap: 16px;
+  border: none;
+}
+
+.best-sellers li {
+  border: 1px solid #d5eed5;
+  /* width: 19%; */
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.best-sellers li:hover {
+  border: 1px solid #000000;
+}
+
+.best-sellers a {
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+}
+
+.best-sellers img {
+  width: 90%;
+  margin: 8px 0;
+}
+
+.best-sellers img:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.best-sellers p {
+  margin: 0;
+  margin-bottom: 8px;
+
+}
+
+.best-sellers .price-book {
+  font-weight: bold;
+  color: red;
+  float: left;
+  padding-left: 28px;
+}
+
+.best-sellers .list-category {
+  justify-content: space-evenly;
+}
+
+/* Thể loại sách */
+.categories {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.categories ul {
+  list-style: none;
+  margin: 20px 0;
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-gap: 16px;
+}
+
+.categories img {
+  width: 100%;
+  padding-bottom: 26px;
+}
+
+.categories img:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.categories li {
+  width: 100%;
+  margin: 5px 0;
+  padding: 0 12px;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 100;
+}
+
+.categories a:hover {
+  color: red;
+}
+
+.book-category {
+  display: flex;
+  margin-left: 32px;
+  margin-right: 32px;
+  border-bottom: 1px solid #3333;
+}
+
+/* sách :list book */
+.logic-search-sort {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+
+.logic-search-sort .inputx {
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  height: 40px;
+  padding: 0px 15px;
+  width: 200px;
+}
+
+.logic-search-sort .select-sort {
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  height: 40px;
+  padding: 10px;
+}
+
+.book-list {
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(5, minmax(0, 3fr));
+  grid-gap: 16px;
+  justify-content: space-between;
+  padding: 20px;
+  list-style: none;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.book-img {
+  display: contents;
+}
+
+.list-book {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.book-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.h2-book {
+  margin-right: 32px;
+  margin-left: 32px;
+  border-bottom: 1px solid #3333;
+  padding-top: 20px;
+}
+
+.book {
+  border: 1px solid #d5eed5;
+  /* width: 19%; */
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.book:hover {
+  border: 1px solid #000000;
+}
+
+.book img {
+  width: 100%;
+  border-radius: 5px;
+  height: 125px;
+  object-fit: contain;
+}
+
+.book img:hover {
+  transform: scale(1.1);
+  transition: 0.3s
+}
+
+.book-title {
+
+  margin: 10px 0;
+}
+
+.book-author {
+  margin: 5px 0;
+}
+
+.book-price {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+
+/* đánh giá */
+.reviews ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.reviews p {
+  margin: 0;
+  font-style: italic;
+}
+
+.book-review {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.review-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.review {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.review-date {
+  color: #666;
+}
+
+.star-rating {
+  font-size: 24px;
+}
+
+.star-rating i {
+  color: gold;
+  margin-right: 5px;
+}
+
+.star-rating i.checked {
+  color: #ffcc00;
+}
+
+.review-comment {
+  margin: 10px 0;
+}
+
+.footer {
+  background-color: white;
+  margin-top: 20px;
+  color: black;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+} */
+
+.footer-distributed{
+	background: white;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 70%;
+	text-align: left;
+	
+}
+.footer-distributed .footer-left{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.footer-left .img-footer {
+  margin: 20px 0;
+  /* width: 70%; */
+  height: 45px;
+  
+}
+.footer-left span {
+  font-size: 13px;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+  
+}
+
+/* Footer left */
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+  border-radius: 50%;
+	line-height: 36px;
+	margin-right: 15px;
+	margin-bottom: 5px;
+  
+}
+
+/* The company logo */
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+.footer-center .info {
+  margin: 40px 0 20px 20px ;
+  font-weight: 600;
+}
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: white;
+	font-size: 20px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 35px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+/*  */
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: black;
+  font-size: 14px;
+  font-weight:400;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-right .useful-links {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.footer-right .list-links a {
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  color: black;
+  padding: 10px 0;
+}
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+.copy-right{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}

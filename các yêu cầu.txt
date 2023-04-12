@@ -1,0 +1,2 @@
+trang : chi tiết (detail) , bài viết (about) , giỏ hàng , thanh toán
+chức năng : tìm kiếm , lọc , sắp xếp , phân trang , xoá sản phẩm trong giỏ

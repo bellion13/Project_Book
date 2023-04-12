@@ -1,0 +1,335 @@
+.book-detail {
+  width: 60%;
+  margin-top: 20px;
+}
+
+.book-detail .detail-section {
+  background-color: white;
+  padding: 16px 16px 25px 16px;
+  border-radius: 8px;
+}
+
+.detail-essential {
+  display: flex;
+}
+
+.produc-media {
+  padding: 10px;
+}
+
+.produc-detail {
+  width: 60%;
+  padding-left: 70px;
+
+}
+
+.book-title {
+  font-size: 28px;
+  font-family: 'Nunito Sans', 'sans-serif';
+  font-weight: 600;
+
+}
+
+.book-author {
+  padding: 20px 0px;
+
+}
+
+.book-image {
+  width: 100%;
+  padding: 10px;
+}
+
+.book-image img {
+  width: 100%;
+  object-fit: contain;
+  height: 500px;
+}
+
+.book-info {
+  margin-top: 16px;
+  font-size: 16px;
+  padding: 20px 0px;
+
+}
+
+.book-info .span-2 {
+  font-weight: bold;
+}
+
+.book-info p {
+  font-size: 16px;
+}
+
+.book-price-detail {
+  color: #d63c3c;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.book-publisher {
+  padding: 20px 0px;
+
+}
+
+.book-publication-date {
+  padding: 20px 0;
+}
+
+/* quantity */
+.product-quantity {
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: flex-start
+}
+
+.number-qty {
+  font-size: 18px;
+}
+
+.input-group {
+  display: flex;
+  padding-left: 50px;
+}
+
+.decrease-btn,
+.increase-btn {
+  padding: 5px 10px;
+}
+
+.input-group input {
+  padding-left: 24px;
+
+
+}
+
+.quantity-input {
+  width: 60px;
+}
+
+/* end quantity*/
+.book-actions {
+  margin-top: 16px;
+}
+.add-to-cart-button {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-to-cart-button:hover {
+  cursor: pointer;
+  color: rgb(19, 17, 17);
+  background-color: rgb(35, 255, 53);
+}
+
+/* Thông tin sản phẩm  */
+.table-additional td {
+  padding-left: 70px;
+}
+
+.product-info {
+  background-color: white;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.product_view_content-title {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.product_view_tab_content_additional {
+  font-size: 14px;
+}
+
+.product_view_tab_content_additional a {
+  text-decoration: none;
+}
+
+.table-label {
+  font-weight: none;
+  float: left;
+  padding: 5px 20px;
+  color: #777;
+}
+
+.content-description {
+  padding: 20px;
+  line-height: 1.4;
+}
+
+/* sản phẩm tương tự */
+.product__love {
+  width: 60%;
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.product__panel-item {
+  padding: 0 5px 15px;
+}
+
+.product__love .bg-white {
+  display: flex;
+}
+
+.product__love .product__love-heading {
+  padding: 20px;
+}
+
+.product__panel-img-wrap {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.product__panel-img-wrap a {
+  width: 100%;
+}
+
+.product__panel-img {
+  width: 100%;
+}
+.product__panel-img:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
+.product__panel-link {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  display: block;
+  padding-left: 10px;
+}
+
+.product__panel-rate-wrap {
+  color: red;
+  font-size: 13px;
+  padding: 10px 5px;
+  cursor: pointer;
+  padding-left: 10px;
+
+}
+
+.product__panel-price-current {
+  color: red;
+  font-weight: bold;
+  padding: 0 5px;
+  padding-left: 10px;
+
+}
+
+/* Bình luận sản phẩm */
+.product-comments {
+  margin-top: 15px;
+  background-color: white;
+  width: 60%;
+  border-radius: 8px;
+}
+
+.product-comments h3 {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 20px 20px 10px;
+}
+
+.product-comments form {
+  padding: 0 20px 20px;
+}
+
+.product-comments .lebel-comment {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 0;
+  margin-top: 10px;
+
+}
+
+.product-comments .form-control {
+  width: 100%;
+  border-radius: 6px;
+  padding: 6px;
+  border: 1px solid #3333;
+}
+
+.product-comments .btn-primary {
+  color: white;
+  border: none;
+  background-color: #1da1f2;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.product-comments .btn-primary:hover {
+  background-color: #30ff9e;
+  color: black;
+}
+
+/* Thông tin đánh giá */
+.commentator {
+  width: 60%;
+  background-color: white;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.commentator ul li {
+  list-style: none;
+  color: #6656;
+  font-weight: 400;
+  line-height: 1.2;
+
+}
+
+.commentator .comment-item-user-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+}
+
+.commentator .comment-item-user {
+  display: flex;
+  align-items: center;
+}
+
+.comment-item h4 {
+  color: #666;
+  margin-bottom: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Giao hàng */
+.product_view_policy .item {
+  display: inline-block;
+  padding: 20px;
+}
+
+.product-view-detail {
+  background-color: white;
+  padding: 10px 27px;
+  margin-top: 15px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.product-attribute {
+  display: flex;
+  justify-content: center;
+
+}

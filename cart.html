@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/cart.css">
+  <title>BookShop - Cart</title>
+</head>
+
+<body>
+  <!-- bannertop -->
+  <div class="top-banner">
+    <img src="/img/bander/hoisachheartop.jpg" alt="">
+  </div>
+  <!-- header -->
+  <div class="header">
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <a href="./index.html"><img src="/img/logo/fahasa_logo.png" alt="BookShop"></a>
+        </div>
+        <div class="search">
+          <form action="#" method="get">
+            <input type="text" name="search" autocomplete="off" placeholder="Tìm kiếm...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="cart">
+          <a href="./cart.html">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <div class="login">
+          <a href="./login.html">Đăng nhập</a>
+        </div>
+      </div>
+      <div class="header-footer">
+        <nav>
+          <ul>
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./index.html">Sách</a></li>
+            <li><a href="./index.html">Thể loại</a></li>
+            <li><a href="./about.html">Về chúng tôi</a></li>
+            <li><a href="#">Tin tức 24h</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!-- ================ -->
+  <section class="main-cart">
+    <div class="cartt">
+      <h2>Giỏ hàng</h2>
+      <table>
+        <tbody class="list-product-cart">
+          <!-- <tr class="box-container">
+            <td><img class="cart-img" src="" alt="one piece"></td>
+            <td class="title"></td>
+            <td> 
+            <div class="product-quantity">
+              <div class="input-group">
+                <button class="quantity-btn minus-btn">-</button>
+                <input type="number" class="quantity-input" value="1">
+                <button class="quantity-btn plus-btn">+</button>
+                </div>
+                </div></td>
+                <td class="pricee"></td>
+                <td><button class="delete">Xóa</button></td>
+                </tr>  -->
+          
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-price" colspan="4">Tổng tiền:</td>
+            <td class="total-price-number">0</td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="checkout">
+        <a style="width: 200px;" href="/order.html">
+          <button class="checkout-button">Tiến hành thanh toán</button></a>
+      </div>
+    </div>
+  </section>
+  <!-- ================ -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-distributed">
+      <div class="footer-left">
+        <img class="img-footer" src="./img/logo/fahasa_logo.png" alt="Logo"> <br>
+        <span>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60 - 62 Lê Lợi,
+          Quận 1, TP. HCM, Việt Nam</span><br>
+        <span>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại
+          văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</span>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-center">
+        <div class="info">
+          Liên hệ
+        </div>
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>62 Lê Lợi, Quận 1, TP. HCM</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+84 826726045</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="useful-links">
+          Liên kết
+        </div>
+        <div class="list-links">
+          <a href="">Trang chủ</a>
+          <a href="">Về chúng thôi</a>
+          <a href="">Tin tức 24h</a>
+          <a href="">Liên hệ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+<!-- link js -->
+<!-- <script src="/js/script.js"></script> -->
+<script src="/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/detail.css">
+  <link rel="stylesheet" href="/css/paging.css">
+  <title>BookShop - Thông tin sản phẩm</title>
+</head>
+
+<body>
+  <!-- banner top -->
+  <div class="top-banner">
+    <img src="/img/bander/hoisachheartop.jpg" alt="">
+  </div>
+  <!-- header -->
+  <div class="header">
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <a href="./index.html"><img src="/img/logo/fahasa_logo.png" alt="BookShop"></a>
+        </div>
+        <div class="search">
+          <form action="#" method="get">
+            <input type="text" name="search" autocomplete="off" placeholder="Tìm kiếm...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="cart">
+          <a href="./cart.html">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <div class="login">
+          <a href="./login.html">Đăng nhập</a>
+        </div>
+      </div>
+      <div class="header-footer">
+        <nav>
+          <ul>
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./index.html">Sách</a></li>
+            <li><a href="./index.html">Thể loại</a></li>
+            <li><a href="./about.html">Về chúng tôi</a></li>
+            <li><a href="#">Tin tức 24h</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <body>
+    <!-- detail : sản phẩm -->
+    <div class="book-detail">
+      <!-- api detail -->
+      <!-- <section class="detail-section">
+        <div class="detail-essential">
+          <div class="produc-media">
+            <div class="book-image">
+              <img src="/img/listbook/one-piece---tap-101---ban-bia-ao-_-bia-gap-_bia-1_.jpg" alt="Book Cover">
+            </div>
+          </div>
+          <div class="produc-detail">
+            <div class="book-info">
+              <h2 class="book-title">Vua hải tặc</h2>
+              <div class="book-author">
+                <span>Tác giả : </span>
+                <span class="span-2">Oda</span>
+              </div>
+              <div class="book-publisher">
+                <span>NXB :</span>
+                <span class="span-2">Kim đồng</span>
+              </div>
+              <div class="book-publication-date">
+                <span>Năm XB:</span>
+                <span class="span-2">1999</span>
+              </div>
+            </div>
+            <div class="book-price-detail">
+              <span>99.999đ</span>
+            </div>
+            <div class="product-quantity">
+              <label class="number-qty" for="qty">Số lượng:</label>
+              <div class="input-group">
+                <button class="decrease-btn">-</button>
+                <input type="number" class="quantity-input" value="1">
+                <button class="increase-btn">+</button>
+              </div>
+            </div>
+            <div class="book-actions">
+              <button  class="add-to-cart-button" >Thêm vào giỏ hàng</button>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- thông tin sản phẩm -->
+      <!-- api detail -->
+      <section class="product-info">
+        <div id="product_view_info" class="content product_view_content">
+          <div class="product_view_content-title">Thông tin sản phẩm</div>
+          <div class="product_view_tab_content_additional">
+            <table class="data-table table-additional">
+              <tbody>
+                <tr>
+                  <th class="table-label">
+                    Mã hàng
+                  </th>
+                  <td class="data_sku">
+                    8934974184584
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Tên Nhà Cung Cấp
+                  </th>
+                  <td class="data_supplier">
+                    NXB Trẻ
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Tác giả
+                  </th>
+                  <td class="data_author">
+                    Oda
+                  </td>
+                </tr>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    NXB
+                  </th>
+                  <td class="data_publisher">
+                    Trẻ
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Năm XB
+                  </th>
+                  <td class="data_publish_year">
+                    1999
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Ngôn Ngữ
+                  </th>
+                  <td class="data_languages">
+                    Tiếng Việt
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Trọng lượng (gr)
+                  </th>
+                  <td class="data_weight">
+                    250
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Kích Thước Bao Bì
+                  </th>
+                  <td class="data_size">
+                    17.6 x 11.3 cm
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Số trang
+                  </th>
+                  <td class="data_qty_of_page">
+                    190
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-label">
+                    Loại bìa
+                  </th>
+                  <td class="data_book_layout">
+                    Bìa Mềm
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="content-description">
+            <div id="product_tabs_description_contents">
+              <div id="desc_content" class="std">
+                <p style="text-align: justify;"><span>Câu chuyện của Chainsaw Man mô tả một thế giới nơi ma quỷ và con
+                    người cùng tồn tại trên Trái đất, và trong đó con người có thể lập hiệp ước để đạt được sức mạnh của
+                    quỷ.&nbsp;</span><br><span>Nhân vật chính là Denji, để hoàn trả số nợ khổng lồ của cha để lại, Denji
+                    cùng con quỷ nhỏ Pochita làm tất cả mọi công việc để có thể hoàn nợ. Sau một tai nạn, Denji bị giết,
+                    Pochita đã hòa làm một với Denji, giúp cậu hồi sinh và hóa thành “Quỷ cưa” hùng mạnh. Sau đó, Denji
+                    được Makima nhận vào tổ chức săn quỷ và hành trình diệt quỷ của Denji bắt đầu từ đây.</span></p>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+    <!-- sản phẩm tương tự -->
+    <section class="product__love">
+      <h3 class="product__love-heading">
+        Sản phẩm tương tự
+      </h3>
+      <div class="bg-white">
+        <div class="product__panel-item">
+          <div class="product__panel-img-wrap">
+            <img src="/img/detail/1-1.jpg" alt="" class="product__panel-img">
+          </div>
+          <h4 class="product__panel-heading">
+            <a href="#" class="product__panel-link">Tâm Lý Học - Khái Lược Những Tư Tưởng Lớn</a>
+          </h4>
+          <div class="product__panel-rate-wrap">
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+          </div>
+
+          <div class="product__panel-price">
+            <p class="product__panel-price-current">
+              273.000đ
+            </p>
+          </div>
+        </div>
+
+        <div class="product__panel-item">
+          <div class="product__panel-img-wrap">
+            <img src="/img/detail/1-2.jpg" alt="" class="product__panel-img">
+          </div>
+          <h4 class="product__panel-heading">
+            <a href="#" class="product__panel-link">Cẩm Nang Phương Pháp Sư Phạm (Tái Bản 2020)</a>
+          </h4>
+          <div class="product__panel-rate-wrap">
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+          </div>
+
+          <div class="product__panel-price">
+            <p class="product__panel-price-current">
+              120.000đ
+            </p>
+          </div>
+        </div>
+
+        <div class="product__panel-item">
+          <div class="product__panel-img-wrap">
+            <img src="/img/detail/1-3.jpg" alt="" class="product__panel-img">
+          </div>
+          <h4 class="product__panel-heading">
+            <a href="#" class="product__panel-link">STEM- Kỹ Thuật Siêu Đơn Giản</a>
+          </h4>
+          <div class="product__panel-rate-wrap">
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+          </div>
+
+          <div class="product__panel-price">
+            <p class="product__panel-price-current">
+              47.200đ
+            </p>
+          </div>
+        </div>
+        <div class="product__panel-item">
+          <div class="product__panel-img-wrap">
+            <img src="/img/detail/1-4.jpg" alt="" class="product__panel-img">
+          </div>
+          <h4 class="product__panel-heading">
+            <a href="#" class="product__panel-link">Cẩm Nang Tư Duy Học Tập Và Nghiên Cứu..</a>
+          </h4>
+          <div class="product__panel-rate-wrap">
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+          </div>
+
+          <div class="product__panel-price">
+            <p class="product__panel-price-current">
+              24.000đ
+            </p>
+          </div>
+        </div>
+
+        <div class="product__panel-item">
+          <div class="product__panel-img-wrap">
+            <img src="/img/detail/1-5.jpg" alt="" class="product__panel-img" width="110">
+          </div>
+          <h4 class="product__panel-heading">
+            <a href="#" class="product__panel-link">Phương Pháp Giáo Con Của Người Do Thái <br>
+            </a>
+          </h4>
+          <div class="product__panel-rate-wrap">
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+          </div>
+
+          <div class="product__panel-price">
+            <p class="product__panel-price-current">
+              37.200đ
+            </p>
+          </div>
+        </div>
+
+        <div class="product__panel-item">
+          <div class="product__panel-img-wrap">
+            <img src="/img/detail/1-6.jpg" alt="" class="product__panel-img">
+          </div>
+          <h4 class="product__panel-heading">
+            <a href="#" class="product__panel-link">Giáo Dục Stem/Steam: Từ Trải Nghiệm Thực Hành..
+            </a>
+          </h4>
+          <div class="product__panel-rate-wrap">
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+            <i class="fas fa-star product__panel-rate"></i>
+          </div>
+
+          <div class="product__panel-price">
+            <p class="product__panel-price-current">
+              72.250đ
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- bình luận sản phẩm -->
+    <section class="product-comments">
+      <div class="product-comment-2">
+        <h3>Bình luận sản phẩm</h3>
+        <form id="formgroupcomment" method="post">
+          <div class="form-group">
+            <div class="lebel-comment">
+              <label>Tên:</label>
+            </div>
+            <input name="comm_name" required="" type="text" id="form-name" class="form-control" fdprocessedid="eopjv9r">
+          </div>
+          <div class="form-group">
+            <div class="lebel-comment">
+              <label>Email:</label>
+            </div>
+            <input name="comm_mail" required="" type="email" class="form-control" id="pwd" fdprocessedid="d1xkbi">
+          </div>
+          <div class="form-group">
+            <div class="lebel-comment">
+              <label>Nội dung:</label>
+            </div>
+            <textarea name="comm_details" required="" rows="8" id="formcontent" class="form-control"></textarea>
+          </div>
+          <button type="submit" name="sbm" id="submitcomment" class="btn btn-primary"
+            fdprocessedid="4t5x0l">Gửi</button>
+        </form>
+      </div>
+    </section>
+    <!-- đánh giá -->
+    <section class="commentator">
+      <div class="commentator-product">
+        <div class="comment-item">
+          <ul class="item-reviewer">
+            <div class="comment-item-user">
+              <img src="/img/detail/1.png" alt="" class="comment-item-user-img">
+
+              <b>Nguyễn Nhung</b>
+            </div>
+
+            <br>
+            <li>2021-08-17 20:40:10</li>
+            <li>
+              <h4>Sách được bọc nilong kỹ càng, sạch, mới. Giao hàng nhanh. Nội dung chưa đọc nhưng nhìn sơ có vẻ hấp
+                dẫn và rất nhiều kiến thức bổ ích. Mình ở nước ngoài nhờ người mua rồi gửi qua nên khâu đóng gói của
+                người bán quan trọng lắm, giúp cho sách vận chuyển đi xa cũng không bị hư tổn gì. Sẽ tiếp tục ủng hộ.
+                Love book shop .From Hust with LOve</h4>
+            </li>
+          </ul>
+        </div>
+        <div class="comment-item">
+          <ul class="item-reviewer">
+            <div class="comment-item-user">
+              <img src="/img/detail/1.png" alt="" class="comment-item-user-img">
+              <b>Tùng Lương</b>
+            </div>
+
+            <br>
+            <li>2021-02-17 12:20:10</li>
+            <li>
+              <h4>Sách được đóng rất cẩn thận, hộp ko bị móp méo gì cả .... , giao hàng chậm cả tuần, Rõ trên app báo
+                hàng đến kho rồi cả tuần k thấy đâu. shipper rất vui tính và thân thiện . Còn ngoài ra thì sách rất đẹp
+                nha mọi người. Giấy sáng và thơm. Từ bìa tới màu sắc trong sách.Thấy mọi người bảo hay lắm nên mua về
+                thử chứ mk chưa có đọc nên chưa thể review về nội dung.</h4>
+            </li>
+          </ul>
+        </div>
+        <div class="comment-item">
+          <ul class="item-reviewer">
+            <div class="comment-item-user">
+              <img src="/img/detail/1.png" alt="" class="comment-item-user-img">
+
+              <b>Trung Trần</b>
+            </div>
+
+            <br>
+
+            <li>2020-12-27 10:48:20</li>
+            <li>
+              <h4>Love it! - Sách bìa cứng, in màu, giấy dày. - Giao hàng đúng hẹn, bao bì cẩn thận. -mình đã tham gia 1
+                lớp nhưng chưa thông lắm nên mua về đọc lại.Giờ thì thông rồi .Giá hơi chát nhưng phù hợp, hy vọng sẽ có
+                giá tốt hơn vào kỳ tái bản kế tiếp! - Nội dung hay, công phu, nhiều thuật ngữ nhưng viết dễ hiểu, hữu
+                ích; có lẽ dịch cũng tốt nữa! Tò mò quá nên mình mua thêm ebook tiếng Anh để đọc thêm nâng cao từ vựng.
+                Quyển này đọc nguyên gốc (tiếng Anh) trước chắc sẽ rất khó đọc. Bạn nào làm quản lý mua đọc cũng hữu
+                ích! Đáng đồng tiền bát gạo!</h4>
+            </li>
+          </ul>
+        </div>
+        <div class="comment-item">
+          <ul class="item-reviewer">
+            <div class="comment-item-user">
+              <img src="/img/detail/1.png" alt="" class="comment-item-user-img">
+
+              <b>Sơn Hoàng</b>
+            </div>
+            <br>
+
+            <li>2020-08-17 20:40:18</li>
+            <li>
+              <h4>sách được đóng trong hộp và có 1 lớp màng nilon bảo vệ. Gáy sách ko bị móp méo, chất lượng giấy, màu
+                sắc rất tuyệt. Nội dung cực kỳ hữu ích, rất dễ hiểu cho thể loại sách thuần về lý thuyết tâm lý.Nội dung
+                sách mới, lạ. Sách sử dụng rất nhiều thuật ngữ khoa học, nên đòi hỏi người đọc kiên nhẫn và có hiểu biết
+                nhất định. Cực kỳ hài lòng và sẽ ủng hộ tiếp</h4>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- giao hàng -->
+    <section class="product-view-detail">
+      <div class="product_view_policy">
+        <div class="product-attribute">
+          <div class="item">
+            <div class="item-content">
+              <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-1-2020/icon/ico_shop_1.png">
+              <span><a>Chính Sách Khách Sỉ</a></span>
+              <span><a>Khách Sỉ</a></span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-1-2020/icon/ico_truck.png">
+              <span><a>Thời Gian Giao Hàng</a></span>
+              <span><a>Giao Hàng</a></span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-1-2020/icon/ico_transfer.png">
+              <span><a>Chính Sách Đổi Trả</a></span>
+              <span><a>Đổi Trả</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!--: footer -->
+  <footer class="footer">
+    <div class="footer-distributed">
+      <div class="footer-left">
+        <img class="img-footer" src="./img/logo/fahasa_logo.png" alt="Logo"> <br>
+        <span>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60 - 62 Lê Lợi,
+          Quận 1, TP. HCM, Việt Nam</span><br>
+        <span>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại
+          văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</span>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-center">
+        <div class="info">
+          Liên hệ
+        </div>
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>62 Lê Lợi, Quận 1, TP. HCM</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+84 826726045</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="useful-links">
+          Liên kết
+        </div>
+        <div class="list-links">
+          <a href="">Trang chủ</a>
+          <a href="">Về chúng thôi</a>
+          <a href="">Tin tức 24h</a>
+          <a href="">Liên hệ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+  <!-- link js -->
+  <!-- <script src="./js/script.js"></script> -->
+  <script src="/js/detail.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>

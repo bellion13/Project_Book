@@ -1,0 +1,24 @@
+.container-about {
+    max-width: 70%;
+    font-size: 13px;
+    font-family: 'Nunito Sans' !important;
+    background-color: white;
+    padding: 0 15px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+.page-title {
+    font-size: 20px;
+    margin-top: 20px;
+}
+.container-about p {
+    margin: 0 0 10px;
+
+}
+.std .caption  {
+    font-weight: 600;
+}
+.std ul li {
+    padding-left: 20px;
+    list-style-type: none; 
+}

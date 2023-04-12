@@ -1,0 +1,55 @@
+.table > tbody > tr > td {
+  line-height: 30px;
+}
+
+
+
+.form-control {
+  max-width: 570px;
+}
+
+tbody td:nth-child(7) {
+  width: 60px;
+  /* background-color: red; */
+}
+tbody td:nth-child(5) {
+  position: relative;
+  align-items: center;
+  bottom: 50%;
+  border: none;
+  line-height: 80px;
+}
+
+.input-img {
+  display: flex;
+  line-break: auto;
+  flex-direction: column;
+}
+
+.input-img input {
+  margin: 3px 0px;
+}
+
+.modal-dialog {
+  width: 600px;
+}
+
+.option-brand {
+  height: 27px;
+  width: 100px;
+  text-align: center;
+  color: black;
+}
+
+.table-input-data > table > tbody > tr {
+  display: flex;
+}
+
+.table-input-data > table > tbody > tr > td {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 4px;
+}
+.option-brand {
+  margin: 4px 0px;
+}
