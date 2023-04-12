@@ -155,14 +155,55 @@ header {
   background-color: #1adb4a;
 }
 /*  banner */
-.banner {
+.main-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 15px;
+  background-color: white;
+  height: auto;
+  border-radius: 5px;
+  
 }
-.banner-img {
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  /* height: 320px; */
+  
+}
+
+.banner-left {
+  float: left;
+  flex: 2;
+  /* width: 60%; */
+}
+
+.banner-right {
+  /* margin-left: 8px;
+  margin-right: 8px; */
+  float: right;
+  flex: 1;
+  margin: 0 4px 0;
+  /* width: 35%; */
+}
+
+.banner-right__top {
+  margin: 8px;
+}
+
+.banner-right__bottom {
+  margin: 8px;
+}
+
+.banner__img {
   width: 100%;
   border-radius: 5px;
-  cursor: pointer;
+  height: auto;
 }
+
 
 /* sách bán chạy */
 .book-hot {
@@ -367,6 +408,7 @@ header {
   border-radius: 5px;
   font-size: 15px;
   margin-bottom: 12px;
+  overflow: hidden;
 }
 
 .book:hover {

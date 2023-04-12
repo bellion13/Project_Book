@@ -1,0 +1,15 @@
+.container-contact {
+    width: 70%;
+    background-color: white;
+    margin: 15px auto 0;
+    padding: 10px;
+}
+.container-contact-head {
+    color: #333333;
+    padding: 0px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.container-contact-body {
+
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contact.css">
+    <title>BookShop - Thông tin sản phẩm</title>
+</head>
+
+<body>
+    <!-- banner top -->
+    <div class="top-banner">
+        <img src="/img/bander/hoisachheartop.jpg" alt="">
+    </div>
+    <!-- header -->
+    <div class="header">
+        <header>
+            <div class="header-top">
+                <div class="logo">
+                    <a href="./index.html"><img src="/img/logo/fahasa_logo.png" alt="BookShop"></a>
+                </div>
+                <div class="search">
+                    <form action="#" method="get">
+                        <input type="text" name="search" autocomplete="off" placeholder="Tìm kiếm...">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div class="cart">
+                    <a href="./cart.html">
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="login">
+                    <a href="./login.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div class="header-footer">
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Trang chủ</a></li>
+                        <li><a href="./index.html">Sách</a></li>
+                        <li><a href="./index.html">Thể loại</a></li>
+                        <li><a href="./about.html">Về chúng tôi</a></li>
+                        <li><a href="#">Tin tức 24h</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="container-contact">
+        <div class="container-contact-head">
+            <h1>Liên hệ</h1>
+        </div>
+        <div class="container-contact-body">
+            <div class="page-body-inner">
+                <div class="grid md-mg-left-15">
+                    <div class="grid__item md-pd-left15 large--one-third medium--one-half small--one-whole">
+                        <div class="contact-wrapper text-center">
+                            <div class="contact-title">
+                                <h4>
+                                    Địa chỉ:
+                                </h4>
+                            </div>
+                            <div class="contact-info">
+                                Số 17 Ngõ 121, Lê Thanh Nghị, Hai Bà Trưng, Hà Nội
+                            </div>
+                        </div>
+                        <div class="contact-wrapper text-center">
+                            <div class="contact-title">
+                                <h4>
+                                    Số điện thoại: 033 66 88 683
+                                </h4>
+                            </div>
+                            <div class="contact-info">
+                                <a href="tel:033 66 88 683">033 66 88 683</a>
+                            </div>
+                        </div>
+                        <div class="contact-wrapper text-center">
+                            <div class="contact-title">
+                                <h4>
+                                    Email:
+                                </h4>
+                            </div>
+                            <div class="contact-info">
+                                <a href="mailto:kha.nguyen@laptopk1.vn">kha.nguyen@laptopk1.vn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__item md-pd-left15 large--one-third medium--one-half small--one-whole float-right">
+                        <div class="contact-title">
+                            <h4>
+                                Form liên hệ:
+                            </h4>
+                        </div>
+                        <div class="form-vertical clearfix">
+                            <form accept-charset="UTF-8" action="/contact" class="contact-form" method="post">
+                                <input name="form_type" type="hidden" value="contact">
+                                <input name="utf8" type="hidden" value="✓">
+                                <label for="ContactFormName" class="hidden-label">Họ tên của bạn</label>
+                                <input type="text" id="ContactFormName" class="input-full" name="contact[name]"
+                                    placeholder="Họ tên của bạn" autocapitalize="words" value="">
+                                <label for="ContactFormEmail" class="hidden-label">Địa chỉ email của
+                                    bạn</label>
+                                <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]"
+                                    placeholder="Địa chỉ email của bạn" autocorrect="off" autocapitalize="off" value="">
+                                <label for="ContactFormPhone" class="hidden-label">Số điện thoại của
+                                    bạn</label>
+                                <input type="tel" id="ContactFormPhone" class="input-full" name="contact[phone]"
+                                    placeholder="Số điện thoại của bạn" pattern="[0-9\-]*" value="">
+
+                                <label for="ContactFormMessage" class="hidden-label">Nội dung</label>
+                                <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]"
+                                    placeholder="Nội dung"></textarea>
+
+                                <input type="submit" class="btn right btnContactSubmit" value="Gửi">
+
+
+                                <input id="328177e097da4c358ca1de82dc32d4ed" name="g-recaptcha-response" type="hidden"
+                                    value="03AKH6MRGP4YBWEZslm9cKPu9PVOud0dzZWdC8PqN2iV08GOl-tq-eh0PJISTlHaX2n0niJkXCGcZbjTpjtQWCHjctnweU-Rx0JZb_00lQ48ZK5xLQfM3OIvSelmCVMcJlQnV_uSSNkDtvOhAIGciVuNLp0g4UmB_A8Nwi7cQ01Kym2vVLXOS9m54KwXik-oIttDOsizpzDOJKF6bXykfWs9gg_MaK9Eej5KdI7xgzfJKYSjYe_o3T-wk_QcGcpxIkwcqVt0FX9PGrPdW8R8CbJEh46ObnxvLARKWOVx7tqac-qUYDfx6Xp6qay7zCm-nz4lIsMJcOAf05jFAzqwYVrcNxOaI0xqEKeLuuGhwx5jgeEr5_FoX-ocq_G8RvcSH6qICjg10oyi9wyp4mMOxk98c6HCLrrlmWf27YV2_l8ttX5dc_MxPS1axvRDOdNAR51VEvLthZBJUGkIYqYXlRqcw0i0Dcu3Jvdtfbl9rIWyXTTDEZK5U52FQoEHMIrWEEQuAEL_CVX823">
+                                <script
+                                    src="https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-"></script>
+                                <script>grecaptcha.ready(function () { grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', { action: 'submit' }).then(function (token) { document.getElementById('328177e097da4c358ca1de82dc32d4ed').value = token; }); });</script>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="grid__item md-pd-left15 large--one-third medium--one-whole small--one-whole">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.5806732803726!2d105.77023335075684!3d20.96934828596204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453adc69b61d1%3A0xaaad0ec3e795cb46!2sLaptopK1.vn+-+Laptop+WorkStation%2C+Mua+b%C3%A1n+laptop+c%C5%A9+uy+t%C3%ADn!5e0!3m2!1svi!2s!4v1556788062025!5m2!1svi!2s"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--: footer -->
+    <footer class="footer">
+        <div class="footer-distributed">
+            <div class="footer-left">
+                <img class="img-footer" src="./img/logo/fahasa_logo.png" alt="Logo"> <br>
+                <span>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60 - 62
+                    Lê Lợi,
+                    Quận 1, TP. HCM, Việt Nam</span><br>
+                <span>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng
+                    trực tiếp tại
+                    văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</span>
+                <div class="footer-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="info">
+                    Liên hệ
+                </div>
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p>62 Lê Lợi, Quận 1, TP. HCM</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+84 826726045</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="useful-links">
+                    Liên kết
+                </div>
+                <div class="list-links">
+                    <a href="">Trang chủ</a>
+                    <a href="">Về chúng thôi</a>
+                    <a href="">Tin tức 24h</a>
+                    <a href="">Liên hệ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+    <!-- link js -->
+</body>
+
+</html>
