@@ -140,19 +140,25 @@ header {
   }
 /*  */
 .login {
-  /* margin-left: 46px; */
-  align-items: center;
+  /* align-items: center;
   background-color: #087bff;
   padding: 7px;
-  border-radius: 5px;
-
+  border-radius: 5px; */
 }
 .login a{
-  color:white;
-  text-decoration: none;
+  /* color:white; */
+  /* text-decoration: none; */
+  color: #000000;
+  font-size: 20px;
+}
+.login:hover a{
+  /* color:white; */
+  /* text-decoration: none; */
+  color: #ff0000;
+  /* font-size: 20px; */
 }
 .login:hover {
-  background-color: #1adb4a;
+  /* background-color: #1adb4a; */
 }
 /*  banner */
 .main-banner {

@@ -1,45 +1,155 @@
 <!DOCTYPE html>
-<!---Coding By CoderGirl | www.codinglabweb.com--->
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Đăng nhập || Đăng ký</title>
-  <!---Custom CSS File--->
-  <link rel="stylesheet" href="/css/login.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- <link rel="stylesheet" href="/css/paging.css"> -->
+  <link rel="stylesheet" href="./css/login.css">
+  <title>BookShop - Trang chủ</title>
 </head>
+
 <body>
-  <div class="container">
-    <input type="checkbox" hidden id="check">
-    <div class="login form">
-      <header>Đăng nhập</header>
-      <form action="#">
-        <input type="text" placeholder="Nhập email của bạn">
-        <input type="password" placeholder="Nhập mật khẩu của bạn">
-        <a href="#">Quên mật khẩu?</a>
-        <input type="button" class="button" value="Đăng nhập">
-      </form>
-      <div class="signup">
-        <span class="signup">Không có tài khoản?
-         <label for="check">Đăng ký</label>
-        </span>
+  <!-- bannertop -->
+  <div class="top-banner">
+    <img src="/img/bander/hoisachheartop.jpg" alt="">
+  </div>
+  <!-- header -->
+  <div class="header">
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <a href="./index.html"><img src="/img/logo/fahasa_logo.png" alt="BookShop"></a>
+        </div>
+        <div class="search">
+          <form action="#" method="get">
+            <input type="text" name="search" autocomplete="off" placeholder="Tìm kiếm...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="cart">
+          <a href="./cart.html">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <div class="login">
+          <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
       </div>
-    </div>
-    <div class="registration form">
-      <header>Đăng ký</header>
-      <form action="#">
-        <input type="text" placeholder="Nhập email của bạn">
-        <input type="password" placeholder="Tạo mật khẩu">
-        <input type="password" placeholder="Xác nhận mật khẩu">
-        <input type="button" class="button" value="Đăng ký">
-      </form>
-      <div class="signup">
-        <span class="signup">Bạn có sẵn tài khoản ?
-         <label for="check">Đăng nhập</label>
-        </span>
+      <div class="header-footer">
+        <nav>
+          <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#books">Sách</a></li>
+            <li><a href="#categorys">Thể loại</a></li>
+            <li><a href="./about.html">Về chúng tôi</a></li>
+            <!-- <li><a href="#">Tin tức 24h</a></li> -->
+            <li><a href="./contact.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="body-login">
+    <div class="container">
+      <input type="checkbox" hidden id="check">
+      <div class="login form">
+        <header>Đăng nhập</header>
+        <form action="#">
+          <input type="text" placeholder="Nhập email của bạn">
+          <input type="password" placeholder="Nhập mật khẩu của bạn">
+          <a href="#">Quên mật khẩu?</a>
+          <input type="button" class="button" value="Đăng nhập">
+        </form>
+        <div class="signup">
+          <span class="signup">Không có tài khoản?
+           <label for="check">Đăng ký</label>
+          </span>
+        </div>
+      </div>
+      <div class="registration form">
+        <header>Đăng ký</header>
+        <form action="#">
+          <input type="text" placeholder="Nhập email của bạn">
+          <input type="password" placeholder="Tạo mật khẩu">
+          <input type="password" placeholder="Xác nhận mật khẩu">
+          <input type="button" class="button" value="Đăng ký">
+        </form>
+        <div class="signup">
+          <span class="signup">Bạn có sẵn tài khoản ?
+           <label for="check">Đăng nhập</label>
+          </span>
+        </div>
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="footer-distributed">
+      <div class="footer-left">
+        <img class="img-footer" src="./img/logo/fahasa_logo.png" alt="Logo"> <br>
+        <span>Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCMCông Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA60 - 62 Lê Lợi,
+          Quận 1, TP. HCM, Việt Nam</span><br>
+        <span>Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại
+          văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.</span>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-center">
+        <div class="info">
+          Liên hệ
+        </div>
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>62 Lê Lợi, Quận 1, TP. HCM</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p><a href="tel:082672045">0826726045</a></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="useful-links">
+          Liên kết
+        </div>
+        <div class="list-links">
+          <a href="">Trang chủ</a>
+          <a href="">Về chúng thôi</a>
+          <a href="">Tin tức 24h</a>
+          <a href="">Liên hệ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+
+  <!-- link js -->
+  <script src="/js/script.js"></script>
+  <script src="/paging/paging.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
