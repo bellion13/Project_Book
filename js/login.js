@@ -4,7 +4,6 @@ const inputPassLog = document.querySelector(".input-login__password");
 
 var accounts = [
   { username: "admin123@gmail.com", password: "admin" },
-
 ];
 
 btnLogin.addEventListener("click", () => {
