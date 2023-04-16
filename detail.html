@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/detail.css">
-  <link rel="stylesheet" href="/css/paging.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/detail.css">
+  <link rel="stylesheet" href="./css/grid.css">
+  <link rel="stylesheet" href="./css/reponsive.css">
+
   <title>BookShop - Thông tin sản phẩm</title>
 </head>
 
@@ -18,12 +20,11 @@
   <div class="top-banner">
     <img src="/img/bander/FahasaT4w3_T423_Banner_Header_1263x60.jpg" alt="">
   </div>
-  <!-- header -->
   <div class="header">
     <header>
       <div class="header-inner">
         <div class="logo">
-          <a href="./index.html"><img src="/img/logo/fahasa_logo.png" alt="BookShop"></a>
+          <a href="./index.html"><img src="./img/logo/fahasa-logo.png" alt="BookShop"></a>
         </div>
         <div class="header-nav">
           <div class="header-nav-icon">
@@ -32,13 +33,13 @@
           </div>
           <span class="connect-nav"></span>
           <ul class="nav">
-            <li class="nav-item"><a href="">Trang chủ</a></li>
-            <li class="nav-item"><a href="">Sách</a></li>
-            <li class="nav-item"><a href="">
+            <li class="nav-item"><a href="#">Trang chủ</a></li>
+            <li class="nav-item"><a href="#">Sách</a></li>
+            <li class="nav-item"><a href="#">
                 Thể loại
                 <i class="fa-solid fa-chevron-right"></i>
               </a>
-              <ul class="subnav" >
+              <ul class="subnav">
                 <li class="subnav-item"><a href="#">Manga</a></li>
                 <li class="subnav-item"><a href="#">Văn học</a></li>
                 <li class="subnav-item"><a href="#">Light Novel</a></li>
@@ -50,15 +51,79 @@
               </ul>
             </li>
 
-            <li class="nav-item"><a href="">Về chúng tôi</a></li>
-            <li class="nav-item"><a href="">Liên hệ</a></li>
+            <li class="nav-item"><a href="./about.html">Về chúng tôi</a></li>
+            <li class="nav-item"><a href="./contact.html">Liên hệ</a></li>
           </ul>
 
         </div>
         <div class="search">
           <form action="#" method="get">
             <input type="text" name="search" autocomplete="off" placeholder="Tìm kiếm...">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <span type="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </form>
+        </div>
+        <div class="cart">
+          <a href="./cart.html">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <div class="login">
+          <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- mobile,tablet -->
+  <div class="header-mobile">
+    <header>
+      <div class="logo">
+        <a href="./index.html"><img src="./img/logo/fahasa-logo.png" alt="BookShop"></a>
+      </div>
+      <div class="header-inner-mobile">
+        <div class="header-nav-mobile">
+          <label for="nav-mobile-input" class="header-nav-icon-mobile">
+          </label>
+          <input type="checkbox" name="" hidden class="nav__input" id="nav-mobile-input">
+          <label for="nav-mobile-input" class="nav__overlay"></label>
+          <!-- <span class="connect-nav-mobile"></span> -->
+          <div class="nav__mobile">
+            <label for="nav-mobile-input" class="nav__mobile-icon">
+              <!-- icon đóng -->
+              <i class="fa-solid fa-arrow-left"></i> 
+              <span>Danh mục</span>
+            </label>
+            <ul class="nav-mobile">
+              <li class="nav-item-mobile"><a href="#">Trang chủ</a></li>
+              <li class="nav-item-mobile"><a href="#">Sách</a></li>
+              <li class="nav-item-mobile"><a href="#">
+                  Thể loại
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="subnav-mobile">
+                  <li class="subnav-item-mobile"><a href="#">Manga</a></li>
+                  <li class="subnav-item-mobile"><a href="#">Văn học</a></li>
+                  <li class="subnav-item-mobile"><a href="#">Light Novel</a></li>
+                  <li class="subnav-item-mobile"><a href="#">Lịch sử</a></li>
+                  <li class="subnav-item-mobile"><a href="#">Tâm lý học</a></li>
+                  <li class="subnav-item-mobile"><a href="#">Tâm linh</a></li>
+                  <li class="subnav-item-mobile"><a href="#">Đầu tư</a></li>
+                  <li class="subnav-item-mobile"><a href="#">Sách luyện thi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item-mobile"><a href="./about.html">Về chúng tôi</a></li>
+              <li class="nav-item-mobile"><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="search-mobile">
+          <form  action="#" method="get">
+            <input class="input-mobile" type="text" name="search" autocomplete="off" placeholder="Tìm kiếm sản phẩm ...">
+            <!-- <span type="submit"><i class="fa-solid fa-magnifying-glass"></i></span> -->
           </form>
         </div>
         <div class="cart">
@@ -554,5 +619,10 @@
   <!-- <script src="./js/script.js"></script> -->
   <script src="/js/detail.js"></script>
   <script src="/js/cart.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,6 +1,9 @@
 .book-detail {
-  width: 60%;
+  /* width: 70%; */
   margin-top: 20px;
+  /* display: block; */
+  width: 1200px;
+  /* max-width: 1200px; */
 }
 
 .book-detail .detail-section {
@@ -106,6 +109,7 @@
 
 .quantity-input {
   width: 60px;
+  
 }
 
 /* end quantity*/
@@ -166,7 +170,8 @@
 
 /* sản phẩm tương tự */
 .product__love {
-  width: 60%;
+  /* width: 60%; */
+  max-width: 1200px;
   background-color: white;
   margin-top: 15px;
   border-radius: 8px;
@@ -234,8 +239,9 @@
 .product-comments {
   margin-top: 15px;
   background-color: white;
-  width: 60%;
+  /* width: 60%; */
   border-radius: 8px;
+  width: 1200px;
 }
 
 .product-comments h3 {
@@ -279,7 +285,8 @@
 
 /* Thông tin đánh giá */
 .commentator {
-  width: 60%;
+  /* width: 60%; */
+  max-width: 1200px;
   background-color: white;
   margin-top: 15px;
   padding: 20px;
@@ -325,7 +332,11 @@
   padding: 10px 27px;
   margin-top: 15px;
   border-radius: 8px;
-  width: 60%;
+  /* width: 60%;
+   */
+  
+  width: 1200px;
+  max-width: 1200px;
 }
 
 .product-attribute {

@@ -52,6 +52,7 @@
     height: 34px;
     width: 34px;
     cursor: pointer;
+    display: block;
     }
     
     .nav__overlay {
@@ -105,6 +106,8 @@
         color: #fff;
         width: 100%;
         background-color: #C92127;
+        display: block;
+
     }
     .nav__mobile-icon span {
         margin-left: 60px;

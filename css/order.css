@@ -15,7 +15,8 @@
 }
 
 .container-order {
-    width: 70%;
+    width: 1200px;
+    /* max-width: 1200px; */
 }
 
 .container-order h3 {
@@ -306,19 +307,27 @@
 .checkout_bottom {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .checkout-cart {
     padding: 10px 20px;
 
 }
-
+.checkout-cart a {
+    color: black;
+    text-decoration: none;
+}
+.checkout-cart a:hover {
+    color: rgb(190, 32, 32);
+}
 .btn-confirm {
     border-radius: 6px;
     padding: 10px 20px;
     border: none;
     color: white;
     background-color: #1da1f2;
+    cursor: pointer;
 }
 
 .btn-confirm:hover {
