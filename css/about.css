@@ -1,5 +1,6 @@
 .container-about {
-    max-width: 70%;
+    /* width: 70%; */
+    max-width: 1200px;
     font-size: 13px;
     font-family: 'Nunito Sans' !important;
     background-color: white;

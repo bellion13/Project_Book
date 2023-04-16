@@ -1,81 +1,145 @@
 .body-login {
-  width: 70%;
+  min-width: 1200px;
   background-color: white;
   margin-top: 15px;
 }
-.container{
-  width: 40%;
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  max-width: 430px;
-  width: 70%;
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3); */
+
+.container {
+  width: 100%;
+  max-width: 400px;
 }
-.container .registration{
-  display: none;
-}
-#check:checked ~ .registration{
-  display: block;
-}
-#check:checked ~ .login{
+
+.container .registration {
   display: none;
 }
 
-.container .form{
-  padding: 2rem;
+#check:checked~.registration {
+  display: block;
 }
-.form header{
-  font-size: 2rem;
-  font-weight: 500;
+
+#check:checked~.login {
+  display: none;
+}
+
+.container .form {
+  padding: 30px 16px;
+}
+
+.form .h1 {
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 1.5rem;
 }
- .form input{
-   height: 60px;
-   width: 100%;
-   padding: 0 15px;
-   font-size: 17px;
-   margin-bottom: 1.3rem;
-   border: 1px solid #ddd;
-   border-radius: 6px;
-   outline: none;
- }
- .form input:focus{
-   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
- }
-.form a{
-  font-size: 16px;
+
+.form input {
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form a {
+  font-size: 15px;
   color: #bb1d1d;
   text-decoration: none;
 }
-.form a:hover{
+
+.form a:hover {
   text-decoration: underline;
 }
-.form input.button{
+
+.form input.button {
   color: #fff;
   background: #e42e2e;
-  font-size: 1.2rem;
+  font-size: 17px;
   font-weight: 500;
   letter-spacing: 1px;
   margin-top: 1.7rem;
   cursor: pointer;
   transition: 0.4s;
 }
-.form input.button:hover{
+
+.form input.button:hover {
   background: #b61111;
 }
-.signup{
+
+.social-media-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-fb {
+  background-color: #4C66A4;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.social-fb a i {
+  color: #FFFFFF;
+  padding: 15px 15px;
+  font-size: 19px;
+  width: 100%;
+  height: 100%;
+  /* float: left; */
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+  margin-left: 20px;
+  float: left;
+  font-size: 22px;
+}
+
+.fa-google:before {
+  content: "\f1a0";
+  margin-left: 20px;
+  float: left;
+  font-size: 22px;
+}
+
+.social-fb a i:hover {
+  background-color: #315097;
+  border-radius: 6px;
+}
+
+.social-gg {
+  background-color: #CC3E2F;
+  color: #FFFFFF;
+  border-radius: 6px;
+}
+
+.social-gg a i {
+  color: #FFFFFF;
+  padding: 15px 15px;
+  font-size: 19px;
+  width: 100%;
+  height: 100%;
+}
+
+.social-gg a i:hover {
+  background-color: #be2c1b;
+  border-radius: 6px;
+}
+
+.signup {
   font-size: 17px;
   text-align: center;
 }
-.signup label{
+
+.signup label {
   color: #e42e2e;
   cursor: pointer;
 }
-.signup label:hover{
+
+.signup label:hover {
   text-decoration: underline;
 }

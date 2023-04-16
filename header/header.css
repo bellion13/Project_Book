@@ -1,102 +1,270 @@
-*{
-    margin:0;
-    padding:0;
-    border: none;
-}
-.sidebar {
-    background-color: #192433;
-    padding: 0 40px;
-    height: 50px;
-    line-height: 50px;
-    font-family: sans-serif;
-    color: white;
-}
-ul {
-    float: right;
-}
-li {
-    display: inline;
-    transition: 0.3s;
-    padding: 12px 18px;
-}
-
-.logo {
-    float: left;
-    cursor: pointer;
-}
-
-li a {
-    color: white;
-    text-decoration: none;
-}
-
-.icon {
-    float: right;
-    display: none;
-}
-ul li:hover{
-    background-color:#009688;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-ul.cap_2 {
-    width: 200px;
-    height: 153px;
-    border: 1px solid #192433;
-    background-color: #192433;
-    position: absolute;
-    top: 41px;
-    left: 1px;
-    box-shadow: 2px 2px 4px 1px #00000057;
-    display: none;
-}
-
-ul.cap_2 li {
-    display: block;
-    color: white;
-    border-bottom: 1px solid white;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.main {
+    max-width: 1200px;
+    /* width: 70%; */
+
+}
+
+.top-banner img {
+    /* width: 70%; */
+    max-width: 1200px;
+}
+
+.top-banner {
+    height: 50px;
+    background-color: #A70A27;
+    width: 100%;
+    display: flex;
     text-align: center;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header {
+    /* height: 68px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 70%; */
+    width: 1200px;
+    /* max-width: 1200px; */
+
+    flex-direction: column;
+
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+
+}
+
+.header-inner .logo {
+    width: 220px;
+    height: 36px;
+}
+
+/* menn */
+.icon_menu {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu.svg) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.icon_seemore_gray {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_seemore_gray.svg) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+/* menu đa cấp */
+.header-nav-icon {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-}
-
-ul.cap_2 li:last-child {
-    border: none;
-}
-
-li{
     position: relative;
 }
-li:hover ul.cap_2 {
+
+.connect-nav::before {
+    position: absolute;
+    content: "";
+    /* background-color: red; */
+    width: 80px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+}
+
+.nav {
+    top: 130px;
+    width: 190px;
+    display: none;
+    position: absolute;
+    box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.4);
+    /* display: block; */
+}
+
+.nav,
+.subnav {
+    list-style-type: none;
+    /* font-size: 15px; */
+
+}
+
+.header-nav:hover .nav {
     display: block;
 }
-@media(max-width:1000px){
-    ul{
-        display: none;
-    }
-    ul.active {
-        margin: 0;
-        background-color:black;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top:50px;
-        left: 0px;
-        display: block;
-    }
-    ul li{
-        display: block;
-        text-align: center;
-        border-bottom: 1px solid white
-    }
-    .icon{
-        display: block;
-    }
-    ul.cap_2{
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 9999;
-        left: 0px;
-    }
+
+
+.nav .nav-item {
+    display: block;
+
+
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav .nav-item a {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 20px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.nav .nav-item:hover>a,
+.nav .subnav li:hover a {
+    color: rgb(255, 255, 255);
+    background-color: rgb(226, 68, 68);
+}
+
+/* menu c2 */
+.nav li:hover .subnav {
+    display: block;
+}
+
+.nav .subnav {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    left: 165px;
+    top: 0;
+    margin-left: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.header-nav ul {
+    padding: 0px;
+}
+
+.nav-item i {
+    margin-left: 20px;
+}
+
+.nav .subnav a {
+    color: black;
+    padding: 0 20px;
+    line-height: 46px;
+}
+
+/*  */
+
+.search {
+    border: 1px solid #3333;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    outline: none;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 84%;
+}
+
+.search button {
+    float: right;
+    margin-right: 2px;
+    margin-top: 2px;
+    border: none;
+    padding: 8px 12px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.search button:hover {
+    color: red;
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.cart-icon:hover {
+    color: #E24444;
+}
+
+.cart-icon i {
+    display: block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 16px;
+    text-align: center;
+}
+
+/*  */
+.login {
+    margin-right: 5px;
+}
+
+.login a {
+    color: #000000;
+    font-size: 20px;
+}
+
+.login:hover a {
+
+    color: #E24444;
+    
 }
