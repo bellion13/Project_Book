@@ -1,3 +1,83 @@
+.header {
+  width: 100%;
+  /* height: 80px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px 0px rgba(0,0 ,0 ,0.4);
+}
+.logo-admin {
+  padding: 20px;
+  padding: 20px 20px 20px 50px;
+  font-size: 30px;
+}
+.input__admin {
+  width: 30%;
+}
+.form-control {
+  width: 100%;
+}
+.nav {
+  
+}
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  
+}
+.nav ul li {
+  list-style: none;
+}
+.nav ul li a {
+  display: block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    line-height: 80px;
+    
+}
+.nav ul li a:hover {
+  background-color: rgb(214, 45, 144);
+  color: white;
+}
+.img-admin {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  /* line-height: 80px; */
+}
+.img-admin img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.logout {
+  /* display: none; */
+  /* line-height: 80px; */
+  margin-left: 20px;
+  font-size: 15px;
+  background-color: rgb(241, 72, 72);
+  padding: 10px;
+  border-radius: 5px;
+
+}
+.logout:hover  {
+  background-color: rgb(226, 54, 54);
+
+}
+.logout a {
+  color: white;
+  /* text-decoration: none; */
+}
+
+
+
+
+
+
 .table > tbody > tr > td {
   line-height: 30px;
 }

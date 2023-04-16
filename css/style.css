@@ -60,14 +60,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 70px;
   width: 100%;
-
 }
 
-.header-inner .logo {
-  width: 220px;
-  height: 36px;
+.header-inner .logo img {
+  /* width: 220px;
+  height: 36px; */
+  max-width: 220px;
+    max-height: 39px;
+    margin-top: 5px;
 }
 
 /* menn */
@@ -112,7 +114,7 @@ header {
 }
 
 .nav {
-  top: 130px;
+  top: 120px;
   width: 190px;
   display: none;
   position: absolute;
@@ -124,7 +126,7 @@ header {
 .nav,
 .subnav {
   list-style-type: none;
-  /* font-size: 15px; */
+  font-size: 15px;
 
 }
 
@@ -197,31 +199,36 @@ header {
 .search {
   border: 1px solid #3333;
   border-radius: 5px;
-  width: 50%;
+  width: 60%;
+  /* position: relative; */
 }
 
 .search input[type="text"] {
-  padding: 10px;
+  padding: 8px 0 8px 12px ;
   outline: none;
-  margin-right: 10px;
   border: none;
   border-radius: 5px;
-  width: 84%;
+  max-width: 90%;
+  font-size: 13px;
+  position: relative;
 }
 
-.search button {
+.search span {
   float: right;
-  margin-right: 2px;
-  margin-top: 2px;
+  line-height: 34px;
   border: none;
-  padding: 8px 12px;
-  background-color: white;
-  color: black;
+  margin-top: 1px;
+  align-items: center;
+  padding: 0 20px;
+  color: rgb(255, 255, 255);
+  background-color: #E24444;
+  margin-right: 1px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
-.search button:hover {
-  color: red;
+.search span:hover {
+  background-color: red;
 }
 
 .cart-icon {
@@ -279,6 +286,8 @@ header {
   background-color: white;
   height: auto;
   border-radius: 5px;
+  flex-direction: column;
+
 
 }
 
@@ -320,14 +329,37 @@ header {
   height: auto;
 }
 
-
+.banner-four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 10px;
+}
+.banner-button {
+  display: flex;
+}
+.banner-button__full {
+  margin-top: 6px;
+}
+.banner-button__full:nth-child(1) {
+  margin-right: 10px;
+}
+.banner-button__full:nth-child(2) {
+  margin-right: 10px;
+}
+.banner-button__full:nth-child(3) {
+  margin-right: 10px;
+}
+.banner-button__img {
+  width: 100%;
+  height: auto;
+}
 /* sách bán chạy */
 .book-hot {
   padding: 10px;
   display: flex;
   border-bottom: 1px solid #3333;
   justify-content: center;
-
   font-weight: 550;
   background-color: #ffa1ff;
   border-radius: 8px 8px 0 0;
@@ -349,7 +381,7 @@ header {
   padding: 8px 20px;
   display: grid;
   grid-auto-rows: minmax(min-content, max-content);
-  grid-template-columns: repeat(5, minmax(0, 3fr));
+  grid-template-columns: repeat(6, minmax(0, 3fr));
   border-top: 1px solid #f1f1f1;
   grid-gap: 16px;
   border: none;
@@ -413,6 +445,14 @@ header {
   border-radius: 10px;
 }
 
+.book-category {
+  display: flex;
+  margin-left: 32px;
+  margin-right: 32px;
+  border-bottom: 1px solid #3333;
+  font-size: 24px;
+  text-transform: uppercase;
+}
 .categories ul {
   list-style: none;
   margin: 20px 0;
@@ -448,12 +488,7 @@ header {
   color: red;
 }
 
-.book-category {
-  display: flex;
-  margin-left: 32px;
-  margin-right: 32px;
-  border-bottom: 1px solid #3333;
-}
+
 
 /* sách :list book */
 .logic-search-sort {
@@ -515,11 +550,14 @@ header {
   margin-left: 32px;
   border-bottom: 1px solid #3333;
   padding-top: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  /* font-weight: 500; */
 }
 
 .book {
   border: 1px solid #d5eed5;
-  /* width: 19%; */
+  /* width: 100%; */
   padding: 6px;
   border-radius: 5px;
   font-size: 15px;

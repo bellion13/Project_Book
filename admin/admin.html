@@ -8,12 +8,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./admin.css">
     <title>Quan ly kho hang - Admin</title>
 
 </head>
 
 <body>
+
+    <div class="header">
+        <div class="logo-admin">
+            <i class="fa-regular fa-user"></i>
+            <span>ADMIN</span>
+        </div>
+        <div class="input__admin">
+            <form>
+                <div class="form-input">
+                    <input type="text" placeholder="Tìm kiếm" class="form-control" id="pwd">
+                </div>
+            </form>
+        </div>
+        <div class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="">Tài khoản</a></li>
+                <li class="nav__item"><a class="nav__link" href="">Sách</a></li>
+            </ul>
+        </div>
+        <div class="img-admin">
+            <a href="#" class="profile">
+                <img src="img/people.png">
+            </a>
+            <div class="logout">
+                <a href="">Đăng xuất
+                    <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
     <button type="button" class="btn-add btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Add</button>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">

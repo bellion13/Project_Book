@@ -142,8 +142,10 @@ function displayCart() {
       <td><button class="delete" onclick =removeCart(${dataProduct.id})>Xóa</button></td>
       </tr> 
       `;
-  });
-}
+  })
+  .join(" ");
+  
+} 
 
 displayCart();
 // cộng  số lượng

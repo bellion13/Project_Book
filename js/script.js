@@ -138,3 +138,7 @@ function sort() {
 // });
 
 // console.log('Việt Nam đồng: ' + VND.format(price)); // Việt Nam đồng: 21.450 ₫
+// let price = "";
+// let text = price.toLocaleString("vi-VN", {style:"currency", currency:"VND"});
+
+// document.getElementsByClassName("book-img").innerHTML = text;
