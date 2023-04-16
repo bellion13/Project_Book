@@ -1,3 +1,4 @@
+
 .header {
   width: 100%;
   /* height: 80px; */
@@ -74,7 +75,7 @@
 }
 
 
-
+/* ================= */
 .table > tbody > tr > td {
   line-height: 30px;
 }
@@ -84,7 +85,11 @@
 }
 
 tbody td:nth-child(7) {
-  width: 60px;
+  width: 200px;
+  /* background-color: red; */
+}
+tbody td:nth-child(2) {
+  width: 400px;
   /* background-color: red; */
 }
 tbody td:nth-child(5) {
@@ -93,6 +98,7 @@ tbody td:nth-child(5) {
   bottom: 50%;
   border: none;
   line-height: 80px;
+  /* width: 700px; */
 }
 
 .input-img {
@@ -101,20 +107,11 @@ tbody td:nth-child(5) {
   flex-direction: column;
 }
 
-.input-img input {
-  margin: 3px 0px;
-}
-
 .modal-dialog {
   width: 600px;
+
 }
 
-.option-brand {
-  height: 27px;
-  width: 100px;
-  text-align: center;
-  color: black;
-}
 
 .table-input-data > table > tbody > tr {
   display: flex;
@@ -124,7 +121,4 @@ tbody td:nth-child(5) {
   display: flex;
   flex-direction: column;
   margin: 0px 4px;
-}
-.option-brand {
-  margin: 4px 0px;
 }

@@ -1,13 +1,23 @@
-var courseAPI = "https://6397f76c86d04c7633a1c4d5.mockapi.io/productPhone";
+var courseAPI = "https://64036281302b5d671c4e05dc.mockapi.io/book";
 var main = document.getElementById("main-show-data");
 var $ = document.querySelector.bind(document);
 
+const inputName = document.getElementById("input-title");
+const inputAuthor = document.getElementById("input-author");
 const inputPrice = document.getElementById("input-price");
-const inputName = document.getElementById("input-name");
-const inputAmount = document.getElementById("input-amount");
+const inputNXB = document.getElementById("input-nxb");
+const inputNamXB = document.getElementById("input-namxb");
+const inputMaHang = document.getElementById("input-mahang");
+const inputTenNhaCungCap = document.getElementById("input-tennhacungcap");
+const inputNgonNgu = document.getElementById("input-ngonngu");
+const inputTrongLuong = document.getElementById("input-trongluong");
+const inputKichThuoc = document.getElementById("input-kichthuoc");
+const inputLoaiBia = document.getElementById("input-loaibia");
+const inputSoTrang = document.getElementById("input-sotrang");
 const inputImage = document.getElementById("input-image");
 const inputDescription = document.getElementById("input-description");
-const inputBrand = document.getElementById("input-brand");
+
+
 const save = document.querySelector("#save");
 const create = document.querySelector("#create");
 const updateBtn = document.querySelector("#update-btn");
@@ -25,8 +35,8 @@ function getCourses(callback) {
       return response.json();
     })
     .then(callback);
-  }
-  
+}
+
 function createCourse(data, callback) {
   fetch(courseAPI, {
     method: "POST",
@@ -42,13 +52,26 @@ function createCourse(data, callback) {
     .then(callback);
 }
 
+
+//  chỗ cần làm 
 function handleCreateForm() {
   var createBtn = $("#create");
   createBtn.onclick = function () {
     let formData = {
-      name: inputName.value,
+      title: inputName.value,
+      author: inputAuthor.value,
+      price: inputPrice.value,
+      NXB: inputNXB.value,
+      NamXB: inputNamXB.value,
+      MaHang: inputMaHang.value,
+      TenNhaCungCap: inputTenNhaCungCap.value,
+      NgonNgu: inputNgonNgu.value,
+      TrongluongGr: inputTrongLuong.value,
+      KichThuoc: inputKichThuoc.value,
+      SoTrang: inputSoTrang.value,
+      LoaiBia: inputLoaiBia.value,
       description: inputDescription.value,
-      img: inputImage.value,
+      cover_url: inputImage.value,
     };
     createCourse(formData, function () {});
   };
@@ -65,13 +88,21 @@ function updateFind(id) {
       var ProductUpdate = x.find((currentValue) => {
         return parseInt(currentValue.id) === id;
       });
-      inputName.value = ProductUpdate.name;
-      inputDescription.value = ProductUpdate.description;
+      inputName.value = ProductUpdate.title;
+      inputAuthor.value = ProductUpdate.author;
       inputPrice.value = ProductUpdate.price;
-      inputAmount.value = ProductUpdate.warehouse;
-      inputImage.value = ProductUpdate.img;
-      inputAmount.value = ProductUpdate.warehouse;
-      inputBrand.value = ProductUpdate.brand;
+      inputNXB.value = ProductUpdate.NXB;
+      inputNamXB.value = ProductUpdate.NamXB;
+      inputMaHang.value = ProductUpdate.MaHang;
+      inputTenNhaCungCap.value = ProductUpdate.TenNhaCungCap;
+      inputNgonNgu.value = ProductUpdate.NgonNgu;
+      inputTrongLuong.value = ProductUpdate.TrongluongGr;
+      inputKichThuoc.value = ProductUpdate.KichThuoc;
+      inputLoaiBia.value = ProductUpdate.LoaiBia;
+      inputSoTrang.value = ProductUpdate.SoTrang;
+      inputDescription.value = ProductUpdate.description;
+      inputImage.value = ProductUpdate.cover_url;
+      // inputBrand.value = ProductUpdate.brand;
       save.onclick = () => {
         HandleUpdateForm(`${ProductUpdate.id}`);
       };
@@ -80,12 +111,20 @@ function updateFind(id) {
 
 function HandleUpdateForm(id) {
   let formData = {
-    name: inputName.value,
-    description: inputDescription.value,
-    price: inputPrice.value,
-    warehouse: inputAmount.value,
-    img: inputImage.value,
-    brand: inputBrand.value,
+    title: inputName.value,
+      author: inputAuthor.value,
+      price: inputPrice.value,
+      NXB: inputNXB.value,
+      NamXB: inputNamXB.value,
+      MaHang: inputMaHang.value,
+      TenNhaCungCap: inputTenNhaCungCap.value,
+      NgonNgu: inputNgonNgu.value,
+      TrongluongGr: inputTrongLuong.value,
+      KichThuoc: inputKichThuoc.value,
+      SoTrang: inputSoTrang.value,
+      LoaiBia: inputLoaiBia.value,
+      description: inputDescription.value,
+      cover_url: inputImage.value,
   };
   UpdateCourse(id, formData, () => {});
 }
@@ -118,16 +157,16 @@ function UpdateCourse(id, formData) {
 function renderCourses(courses) {
   main.innerHTML = courses
     .map((currentValue) => {
+      // console.log(currentValue);
       return `
     <tr id="list-courses" >
         <td>${currentValue.id}</td>
-        <td>${currentValue.name}</td>
-        <td>${currentValue.brand}</td>
+        <td>${currentValue.title}</td>
+        <td>${currentValue.author}</td>
         <td>${parseInt(currentValue.price).toLocaleString()}đ</td>
-        <td>${currentValue.warehouse}</td>
         <td>${currentValue.description.slice(0, 100)}...</td>   
-        <td><img src="${currentValue.img}" alt="${
-        currentValue.name
+        <td><img src="${currentValue.cover_url}" alt="${
+        currentValue.title
       }" style="height:40px;"></td>   
         <td class="text-center">
             <button class="btn btn-danger" onclick="HandleDeleteCourses(${

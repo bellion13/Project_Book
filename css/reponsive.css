@@ -1,6 +1,9 @@
 /* Mobile: width < 740px */
 @media (max-width: 739px) {
-    
+    .banner-four {
+        display: none;
+    }
+
 }
 /* Tablet: width >= 740px and width < 1024px */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -155,5 +158,11 @@
     .login i {
         color: #fff;
         padding-left: 10px;
+    }
+    .banner-right {
+        display: none;
+    }
+    .banner-left {
+        width: 100%;
     }
 }

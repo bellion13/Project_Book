@@ -51,7 +51,6 @@ header {
   /* width: 70%; */
   width: 1200px;
   /* max-width: 1200px; */
-
   flex-direction: column;
 
 }
@@ -208,7 +207,7 @@ header {
   outline: none;
   border: none;
   border-radius: 5px;
-  max-width: 90%;
+  width: 90%;
   font-size: 13px;
   position: relative;
 }
@@ -379,9 +378,7 @@ header {
 .best-sellers ul {
   list-style: none;
   padding: 8px 20px;
-  display: grid;
-  grid-auto-rows: minmax(min-content, max-content);
-  grid-template-columns: repeat(6, minmax(0, 3fr));
+  display: flex;
   border-top: 1px solid #f1f1f1;
   grid-gap: 16px;
   border: none;

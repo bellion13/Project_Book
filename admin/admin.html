@@ -25,7 +25,7 @@
         <div class="input__admin">
             <form>
                 <div class="form-input">
-                    <input type="text" placeholder="Tìm kiếm" class="form-control" id="pwd">
+                    <input type="text" placeholder="Tìm kiếm" class="form-control inputx" id="pwd">
                 </div>
             </form>
         </div>
@@ -46,14 +46,14 @@
         </div>
     </div>
 
-    <button type="button" class="btn-add btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Add</button>
+    <button type="button" class="btn-add btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Thêm</button>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Nhập thông tin sách</h4>
                 </div>
                 <div class="modal-body">
                     <div id="popup">
@@ -62,38 +62,89 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <label for="">Name</label>
-                                            <input class="form-control" type="text" id="input-name">
+                                            <label for="">Tên sách</label>
+                                            <input class="form-control" type="text" id="input-title">
+                                        </td>
+                                    
+                                        <td>
+                                            <label for="">Tên tác giả</label>
+                                            <input class="form-control" type="text" id="input-author">
                                         </td>
                                         <td>
-                                            <label for="">Price</label>
+                                            <label for="">Giá</label>
                                             <input class="form-control" type="number" id="input-price" id="">
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="">NXB</label>
+                                            <input class="form-control" type="text" id="input-nxb">
+                                        </td>
+                                    
+                                        <td>
+                                            <label for="">Năm XB</label>
+                                            <input class="form-control" type="text" id="input-namxb">
+                                        </td>
+                                        <td>
+                                            <label for="">Mã Hàng</label>
+                                            <input class="form-control" type="text" id="input-mahang">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="">Tên nhà cung cấp</label>
+                                            <input class="form-control" type="text" id="input-tennhacungcap">
+                                        </td>
+                                    
+                                        <td>
+                                            <label for="">Ngôn ngữ</label>
+                                            <input class="form-control" type="text" id="input-ngonngu">
+                                        </td>
+                                        <td>
+                                            <label for="">Trọng lượng</label>
+                                            <input class="form-control" type="number" id="input-trongluong" id="">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="">Kich thước</label>
+                                            <input class="form-control" type="text" id="input-kichthuoc">
+                                        </td>
+                                    
+                                        <td>
+                                            <label for="">Loại bia</label>
+                                            <input class="form-control" type="text" id="input-loaibia">
+                                        </td>
+                                        <td>
+                                            <label for="">Số trang</label>
+                                            <input class="form-control" type="number" id="input-sotrang" id="">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                            <div>
+                            <!-- <div>
                                 <div>
-                                    <label for="">Brand</label>
-                                    <select class="option-brand" id="input-brand" id="">
-                                        <option value="Samsung">Samsung</option>
-                                        <option value="SamSung">SamSung</option>
-                                        <option value="OPPO">OPPO</option>
-                                        <option value="Xiaomi">Xiaomi</option>
-                                        <option value="Vivo">Vivo</option>
-                                        <option value="iPhone">iPhone</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="">Amount</label>
+                                    <label for="">Số lượng</label>
                                     <input style="width: 250px ;" class="form-control" type="text" id="input-amount">
                                 </div>
 
-                            </div>
+                            </div> -->
 
                             <div class="input-img">
-                                <label for="">Image URL</label>
+                                <label for="">Ảnh</label>
                                 <div style="display:flex;">
                                     <input class="form-control" type="text" id="input-image" placeholder="Image URL"
                                         required>
@@ -101,21 +152,21 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="comment">Description</label>
+                                <label for="comment">Giới thiệu</label>
                                 <textarea name="description" class="form-control" rows="5"
                                     id="input-description"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-success" data-dismiss="modal" id="create">Create</button>
+                                <button class="btn btn-success" data-dismiss="modal" id="create">Thêm</button>
                                 <button id="save" class="btn btn-success" data-dismiss="modal"
-                                    style="display:none ;">Luu</button>
+                                    style="display:none ;">Lưu</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                 </div>
             </div>
 
@@ -127,13 +178,13 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name Product</th>
-                    <th>Brand</th>
-                    <th>Price</th>
-                    <th>Amount</th>
-                    <th>Description</th>
-                    <th>Image</th>
-                    <th></th>
+                    <th>Tên sách</th>
+                    <th>Tên tác giả</th>
+                    <th>Giá</th>
+                    <!-- <th>Số lượng</th> -->
+                    <th>Giới thiệu</th>
+                    <th>Ảnh</th>
+                    <th>Hành động</th>
                 </tr>
             </thead>
             <tbody id="main-show-data">
