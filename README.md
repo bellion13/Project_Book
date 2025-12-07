@@ -63,7 +63,7 @@ Project_Book/
 
 2. Tất cả giao diện chạy trực tiếp qua file `.html` (dùng LiveServer, XAMPP hoặc mở trực tiếp trên trình duyệt).
 
-3. **Yêu cầu kết nối internet** để sử dụng API mẫu từ MockAPI (https://64036281302b5d671c4e05dc.mockapi.io/book).
+3. **Yêu cầu kết nối internet** để sử dụng API mẫu từ MockAPI .
 
 4. Truy cập các file:
    - `index.html`: Trang chủ danh sách sách.
