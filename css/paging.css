@@ -24,16 +24,15 @@
 }
 
 .pagination a:hover {
-  background-color: #f2f2f2;
+  background-color: #E24444;
+  color: white;
 }
 
 .pagination .active {
-  background-color: #ccc;
+  background-color: #E24444;
+  color: white;
 }
 
-.pagination .page {
-  background-color: white;
-}
 
 .pagination .prev,
 .pagination .next {
@@ -41,9 +40,11 @@
   background-color: transparent;
   font-size: 20px;
   color: #333;
+  cursor: pointer;
 }
 
 .pagination .prev:hover,
 .pagination .next:hover {
-  background-color: red;
+  background-color: #E24444;
+  color: white;
 }

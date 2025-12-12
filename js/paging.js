@@ -1,38 +1,60 @@
 const pagination = document.querySelector(".pagination");
-const pages = pagination.querySelectorAll(".page");
-const prev = pagination.querySelector(".prev");
-const next = pagination.querySelector(".next");
-let currentPage = 1;
 
-function showPage(page) {
-  // Code to show the content of the selected page
-}
+window.currPage = 1;
 
-function setActivePage(page) {
-  pages.forEach((p) => p.classList.remove("active"));
-  page.classList.add("active");
-}
+window.renderPagination = function (totalItems) {
+  const totalPages = Math.ceil(totalItems / window.itemPerPage);
+  let html = '';
 
-function goToPage(page) {
-  setActivePage(page);
-  showPage(page);
-  currentPage = parseInt(page.textContent);
-}
+  // Prev Button
+  html += `<a href="#" class="prev" onclick="handlePageChange(window.currPage - 1)">«</a>`;
 
-prev.addEventListener("click", () => {
-  if (currentPage > 1) {
-    goToPage(pages[currentPage - 2]);
+  // Page Numbers
+  if (totalPages <= 7) {
+    for (let i = 1; i <= totalPages; i++) {
+      html += createPageLink(i);
+    }
+  } else {
+    // 1 2 ... 4 5 6 ... 10
+    if (window.currPage <= 3) {
+      for (let i = 1; i <= 3; i++) html += createPageLink(i);
+      html += '<span>...</span>';
+      html += createPageLink(totalPages);
+    } else if (window.currPage >= totalPages - 2) {
+      html += createPageLink(1);
+      html += '<span>...</span>';
+      for (let i = totalPages - 2; i <= totalPages; i++) html += createPageLink(i);
+    } else {
+      html += createPageLink(1);
+      html += '<span>...</span>';
+      html += createPageLink(window.currPage - 1);
+      html += createPageLink(window.currPage);
+      html += createPageLink(window.currPage + 1);
+      html += '<span>...</span>';
+      html += createPageLink(totalPages);
+    }
   }
-});
 
-next.addEventListener("click", () => {
-  if (currentPage < pages.length) {
-    goToPage(pages[currentPage]);
+  // Next Button
+  html += `<a href="#" class="next" onclick="handlePageChange(window.currPage + 1)">»</a>`;
+
+  pagination.innerHTML = html;
+};
+
+function createPageLink(page) {
+  const activeClass = page === window.currPage ? 'active' : '';
+  return `<a href="#" class="page ${activeClass}" onclick="handlePageChange(${page})">${page}</a>`;
+}
+
+window.handlePageChange = function (page) {
+  const totalContents = window.data.length;
+  const maxPage = Math.ceil(totalContents / window.itemPerPage);
+
+  if (page < 1 || page > maxPage) return;
+
+  window.currPage = page;
+  if (typeof window.renderBooks === 'function') {
+    window.renderBooks(window.currPage);
+    window.renderPagination(totalContents);
   }
-});
-
-pages.forEach((p) => {
-  p.addEventListener("click", () => {
-    goToPage(p);
-  });
-});
+};

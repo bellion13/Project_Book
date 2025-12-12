@@ -16,13 +16,15 @@ body {
 
 .main {
   max-width: 1200px;
-  /* width: 70%; */
-
+  width: 100%;
+  padding: 0 10px;
 }
 
 .top-banner img {
   /* width: 70%; */
   max-width: 1200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .top-banner {
@@ -49,8 +51,8 @@ header {
   align-items: center;
   justify-content: center;
   /* width: 70%; */
-  width: 1200px;
-  /* max-width: 1200px; */
+  width: 100%;
+  max-width: 1200px;
   flex-direction: column;
 
 }
@@ -67,8 +69,8 @@ header {
   /* width: 220px;
   height: 36px; */
   max-width: 220px;
-    max-height: 39px;
-    margin-top: 5px;
+  max-height: 39px;
+  margin-top: 5px;
 }
 
 /* menn */
@@ -203,7 +205,7 @@ header {
 }
 
 .search input[type="text"] {
-  padding: 8px 0 8px 12px ;
+  padding: 8px 0 8px 12px;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -334,25 +336,32 @@ header {
   align-items: center;
   padding: 0 10px 10px;
 }
+
 .banner-button {
   display: flex;
 }
+
 .banner-button__full {
   margin-top: 6px;
 }
+
 .banner-button__full:nth-child(1) {
   margin-right: 10px;
 }
+
 .banner-button__full:nth-child(2) {
   margin-right: 10px;
 }
+
 .banner-button__full:nth-child(3) {
   margin-right: 10px;
 }
+
 .banner-button__img {
   width: 100%;
   height: auto;
 }
+
 /* sách bán chạy */
 .book-hot {
   padding: 10px;
@@ -450,6 +459,7 @@ header {
   font-size: 24px;
   text-transform: uppercase;
 }
+
 .categories ul {
   list-style: none;
   margin: 20px 0;
