@@ -1,11 +1,12 @@
-.container-about {
+﻿.container-about {
     /* width: 70%; */
     max-width: 1200px;
+    width: 100%;
     font-size: 13px;
     font-family: 'Nunito Sans' !important;
-    background-color: white;
+    background-color: var(--bg-white);
     padding: 0 15px 20px;
-    margin-top: 15px;
+    margin: 15px auto 0;
     border-radius: 8px;
 }
 .page-title {

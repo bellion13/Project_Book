@@ -1,6 +1,7 @@
 var courseAPI = "https://64036281302b5d671c4e05dc.mockapi.io/book";
 var main = document.getElementById("main-show-data");
 var $ = document.querySelector.bind(document);
+var allCourses = [];
 
 const inputName = document.getElementById("input-title");
 const inputAuthor = document.getElementById("input-author");
@@ -17,15 +18,19 @@ const inputSoTrang = document.getElementById("input-sotrang");
 const inputImage = document.getElementById("input-image");
 const inputDescription = document.getElementById("input-description");
 
-
 const save = document.querySelector("#save");
 const create = document.querySelector("#create");
 const updateBtn = document.querySelector("#update-btn");
+const searchInput = document.getElementById("admin-search");
 
 function start() {
-  getCourses(renderCourses);
+  getCourses(function (courses) {
+    allCourses = courses;
+    applySearch();
+  });
   handleCreateForm();
   HandleBtnAdd();
+  setupSearch();
 }
 start();
 
@@ -47,11 +52,13 @@ function createCourse(data, callback) {
   })
     .then((response) => {
       response.json();
-      getCourses(renderCourses);
+      getCourses(function (courses) {
+        allCourses = courses;
+        applySearch();
+      });
     })
     .then(callback);
 }
-
 
 //  chỗ cần làm 
 function handleCreateForm() {
@@ -112,19 +119,19 @@ function updateFind(id) {
 function HandleUpdateForm(id) {
   let formData = {
     title: inputName.value,
-      author: inputAuthor.value,
-      price: inputPrice.value,
-      NXB: inputNXB.value,
-      NamXB: inputNamXB.value,
-      MaHang: inputMaHang.value,
-      TenNhaCungCap: inputTenNhaCungCap.value,
-      NgonNgu: inputNgonNgu.value,
-      TrongluongGr: inputTrongLuong.value,
-      KichThuoc: inputKichThuoc.value,
-      SoTrang: inputSoTrang.value,
-      LoaiBia: inputLoaiBia.value,
-      description: inputDescription.value,
-      cover_url: inputImage.value,
+    author: inputAuthor.value,
+    price: inputPrice.value,
+    NXB: inputNXB.value,
+    NamXB: inputNamXB.value,
+    MaHang: inputMaHang.value,
+    TenNhaCungCap: inputTenNhaCungCap.value,
+    NgonNgu: inputNgonNgu.value,
+    TrongluongGr: inputTrongLuong.value,
+    KichThuoc: inputKichThuoc.value,
+    SoTrang: inputSoTrang.value,
+    LoaiBia: inputLoaiBia.value,
+    description: inputDescription.value,
+    cover_url: inputImage.value,
   };
   UpdateCourse(id, formData, () => {});
 }
@@ -137,7 +144,10 @@ function HandleDeleteCourses(id) {
     },
   }).then((response) => {
     response.json();
-    start();
+    getCourses(function (courses) {
+      allCourses = courses;
+      applySearch();
+    });
   });
 }
 
@@ -150,7 +160,10 @@ function UpdateCourse(id, formData) {
     body: JSON.stringify(formData),
   }).then((response) => {
     response.json();
-    start();
+    getCourses(function (courses) {
+      allCourses = courses;
+      applySearch();
+    });
   });
 }
 
@@ -169,17 +182,47 @@ function renderCourses(courses) {
         currentValue.title
       }" style="height:40px;"></td>   
         <td class="text-center">
-            <button class="btn btn-danger" onclick="HandleDeleteCourses(${
-              " " + currentValue.id
-            })">Delete</button>
-            <button class=" btn btn-warning" id="update-btn" data-toggle="modal" data-target="#myModal" onclick="updateFind(${
-              currentValue.id
-            })">Update</button>     
+            <div class="action-btns">
+              <button class="btn-icon btn-view" data-toggle="modal" data-target="#viewModal" onclick="viewInfo(${
+                currentValue.id
+              })" title="Xem">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+              <button class="btn-icon btn-update" id="update-btn" data-toggle="modal" data-target="#myModal" onclick="updateFind(${
+                currentValue.id
+              })" title="Sửa">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="btn-icon btn-delete" onclick="HandleDeleteCourses(${
+                " " + currentValue.id
+              })" title="Xoá">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
         </td>
     </tr>
     `;
     })
     .join("");
+}
+
+function viewInfo(id) {
+  const item = allCourses.find((c) => String(c.id) === String(id));
+  if (!item) return;
+  document.getElementById("view-title").textContent = item.title || "";
+  document.getElementById("view-author").textContent = item.author || "";
+  document.getElementById("view-price").textContent = parseInt(item.price || 0).toLocaleString() + "đ";
+  document.getElementById("view-nxb").textContent = item.NXB || "";
+  document.getElementById("view-namxb").textContent = item.NamXB || "";
+  document.getElementById("view-mahang").textContent = item.MaHang || "";
+  document.getElementById("view-ncc").textContent = item.TenNhaCungCap || "";
+  document.getElementById("view-ngonngu").textContent = item.NgonNgu || "";
+  document.getElementById("view-trongluong").textContent = item.TrongluongGr || "";
+  document.getElementById("view-kichthuoc").textContent = item.KichThuoc || "";
+  document.getElementById("view-loaibia").textContent = item.LoaiBia || "";
+  document.getElementById("view-sotrang").textContent = item.SoTrang || "";
+  document.getElementById("view-description").textContent = item.description || "";
+  document.getElementById("view-image").src = item.cover_url || "";
 }
 
 function HandleBtnAdd() {
@@ -190,4 +233,21 @@ function HandleBtnAdd() {
     create.style.display = "block";
     save.style.display = "none";
   };
+}
+
+function applySearch() {
+  const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+  if (!query) {
+    renderCourses(allCourses);
+    return;
+  }
+  const filtered = allCourses.filter((course) =>
+    (course.title || "").toLowerCase().includes(query)
+  );
+  renderCourses(filtered);
+}
+
+function setupSearch() {
+  if (!searchInput) return;
+  searchInput.addEventListener("input", applySearch);
 }

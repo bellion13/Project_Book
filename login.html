@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../img/logo/logo.webp">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./css/grid.css">
   <link rel="stylesheet" href="./css/reponsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
   <title>BookShop - Thông tin sản phẩm</title>
 </head>
@@ -156,20 +157,6 @@
            <label for="check">Đăng ký</label>
           </span>
         </div>
-        <div class="social-media-login">
-          <div class="social-fb">
-            <a href="#">
-              <i class="fa-brands fa-facebook "><span>Login with Facebook</span></i>
-              <!-- <div>Login with Facebook</div> -->
-            </a>
-          </div>
-          <div class="social-gg">
-            <a href="#">
-              <i class="fa-brands fa-google "><span>Login with Google+</span></i>
-              <!-- <div> Login with Google+</div> -->
-            </a>
-          </div>
-        </div>
       </div>
       <div class="registration form">
         <div class="h1">Đăng ký</div>
@@ -213,12 +200,12 @@
 
         <div>
           <i class="fa fa-phone"></i>
-          <p><a href="tel:082672045">0826726045</a></p>
+          <p><a href="tel:19001234">1900 1234</a></p>
         </div>
 
         <div>
           <i class="fa fa-envelope"></i>
-          <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+          <p><a href="mailto:support@bookshop.vn">support@bookshop.vn</a></p>
         </div>
       </div>
       <div class="footer-right">
@@ -234,11 +221,17 @@
       </div>
     </div>
   </footer>
-  <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+  <div class="copy-right">Ber © <span class="current-year"></span> – All Rights Reserved</div>
+  <script>
+    document.querySelectorAll(".current-year").forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
 
   <!-- link js -->
   <script src="./js/cart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

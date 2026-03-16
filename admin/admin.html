@@ -1,31 +1,32 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo/logo.webp">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <link rel="stylesheet" href="./admin.css">
+    <link rel="icon" href="../img/logo/logo.webp">
     <title>Quan ly kho hang - Admin</title>
 
 </head>
 
-<body>
+<body class="admin-body">
 
     <div class="header">
         <div class="logo-admin">
             <i class="fa-regular fa-user"></i>
-            <span>ADMIN</span>
         </div>
         <div class="input__admin">
             <form>
                 <div class="form-input">
-                    <input type="text" placeholder="Tìm kiếm" class="form-control inputx" id="pwd">
+                    <input type="text" placeholder="Tìm kiếm theo tên sách" class="form-control inputx" id="admin-search">
                 </div>
             </form>
         </div>
@@ -36,9 +37,7 @@
             </ul>
         </div>
         <div class="img-admin">
-            <a href="#" class="profile">
-                <img src="img/people.png">
-            </a>
+                <img src="../img/logo/logo.webp" alt="Logo">
             <div class="logout">
                 <a href="../index.html">Đăng xuất
                     <i class="fa-solid fa-arrow-right"></i></a>
@@ -174,6 +173,7 @@
     </div>
 
     <div id="main">
+        <div class="table-responsive">
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
@@ -191,6 +191,46 @@
 
             </tbody>
         </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="viewModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thông tin sách</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table table-input-data">
+                        <div class="view-media">
+                            <img id="view-image" class="view-image" src="" alt="">
+                            <div class="view-grid">
+                                <div class="view-item"><strong>Tên sách</strong><span id="view-title"></span></div>
+                                <div class="view-item"><strong>Tác giả</strong><span id="view-author"></span></div>
+                                <div class="view-item"><strong>Giá</strong><span id="view-price"></span></div>
+                                <div class="view-item"><strong>NXB</strong><span id="view-nxb"></span></div>
+                                <div class="view-item"><strong>Năm XB</strong><span id="view-namxb"></span></div>
+                                <div class="view-item"><strong>Mã hàng</strong><span id="view-mahang"></span></div>
+                                <div class="view-item"><strong>Nhà cung cấp</strong><span id="view-ncc"></span></div>
+                                <div class="view-item"><strong>Ngôn ngữ</strong><span id="view-ngonngu"></span></div>
+                                <div class="view-item"><strong>Trọng lượng</strong><span id="view-trongluong"></span></div>
+                                <div class="view-item"><strong>Kích thước</strong><span id="view-kichthuoc"></span></div>
+                                <div class="view-item"><strong>Loại bìa</strong><span id="view-loaibia"></span></div>
+                                <div class="view-item"><strong>Số trang</strong><span id="view-sotrang"></span></div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 12px;">
+                            <strong>Giới thiệu:</strong>
+                            <div id="view-description" class="view-desc"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 

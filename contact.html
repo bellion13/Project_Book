@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../img/logo/logo.webp">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <link rel="stylesheet" href="./css/style.css">
@@ -164,7 +165,7 @@
                         </h4>
                     </div>
                     <div class="contact-info">
-                        <a href="tel:0826726045">0826726045</a>
+                        <a href="tel:19001234">1900 1234</a>
                     </div>
                 </div>
                 <div class="contact-wrapper">
@@ -174,7 +175,7 @@
                         </h4>
                     </div>
                     <div class="contact-info">
-                        <a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a>
+                        <a href="mailto:support@bookshop.vn">support@bookshop.vn</a>
                     </div>
                 </div>
             </div>
@@ -243,7 +244,7 @@
 
                 <div>
                     <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+                    <p><a href="mailto:support@bookshop.vn">support@bookshop.vn</a></p>
                 </div>
             </div>
             <div class="footer-right">
@@ -259,7 +260,12 @@
             </div>
         </div>
     </footer>
-    <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+  <div class="copy-right">Ber © <span class="current-year"></span> – All Rights Reserved</div>
+  <script>
+    document.querySelectorAll(".current-year").forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
     <!-- link js -->
     <script src="./js/cart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

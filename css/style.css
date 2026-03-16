@@ -1,12 +1,23 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
+:root {
+  --primary-red: #C92127;
+  --primary-red-strong: #A70A27;
+  --primary-red-soft: #E24444;
+  --text-black: #000000;
+  --text-muted: #333333;
+  --bg-white: #ffffff;
+  --border-light: #e5e5e5;
+}
+
 body {
-  background-color: #f0f0f0;
+  background-color: #f3f3f3;
+  color: var(--text-black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +40,7 @@ body {
 
 .top-banner {
   height: 50px;
-  background-color: #A70A27;
+  background-color: var(--primary-red-strong);
   width: 100%;
   display: flex;
   text-align: center;
@@ -38,7 +49,7 @@ body {
 
 .header {
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +201,7 @@ header {
 }
 
 .nav .subnav a {
-  color: black;
+  color: var(--text-black);
   padding: 0 20px;
   line-height: 46px;
 }
@@ -198,7 +209,7 @@ header {
 /*  */
 
 .search {
-  border: 1px solid #3333;
+  border: 1px solid var(--border-light);
   border-radius: 5px;
   width: 60%;
   /* position: relative; */
@@ -221,15 +232,15 @@ header {
   margin-top: 1px;
   align-items: center;
   padding: 0 20px;
-  color: rgb(255, 255, 255);
-  background-color: #E24444;
+  color: var(--bg-white);
+  background-color: var(--primary-red-soft);
   margin-right: 1px;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .search span:hover {
-  background-color: red;
+  background-color: var(--primary-red);
 }
 
 .cart-icon {
@@ -237,11 +248,11 @@ header {
   display: inline-block;
   margin-right: 10px;
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-muted);
 }
 
 .cart-icon:hover {
-  color: #E24444;
+  color: var(--primary-red);
 }
 
 .cart-icon i {
@@ -255,8 +266,8 @@ header {
   min-width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #f44336;
-  color: #fff;
+  background-color: var(--primary-red-soft);
+  color: var(--bg-white);
   font-size: 0.8rem;
   line-height: 16px;
   text-align: center;
@@ -268,13 +279,13 @@ header {
 }
 
 .login a {
-  color: #000000;
+  color: var(--text-black);
   font-size: 20px;
 }
 
 .login:hover a {
 
-  color: #E24444;
+  color: var(--primary-red);
 
 }
 
@@ -284,7 +295,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 15px;
-  background-color: white;
+  background-color: var(--bg-white);
   height: auto;
   border-radius: 5px;
   flex-direction: column;
@@ -364,14 +375,14 @@ header {
 
 /* sách bán chạy */
 .book-hot {
+  color: var(--text-black);
   padding: 10px;
   display: flex;
-  border-bottom: 1px solid #3333;
   justify-content: center;
   font-weight: 550;
-  background-color: #ffa1ff;
+  background-color: #ffb3b3;
   border-radius: 8px 8px 0 0;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .best-sellers {
@@ -379,7 +390,7 @@ header {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--bg-white);
   margin-top: 15px;
   border-radius: 10px;
 }
@@ -394,45 +405,57 @@ header {
 }
 
 .best-sellers li {
-  border: 1px solid #d5eed5;
+  border: 1px solid var(--border-light);
   /* width: 19%; */
-  padding: 6px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 10px;
   font-size: 15px;
   margin-bottom: 12px;
+  background-color: var(--bg-white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  width: 180px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .best-sellers li:hover {
-  border: 1px solid #000000;
+  border: 1px solid var(--primary-red);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .best-sellers a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-muted);
   width: 100%;
 }
 
 .best-sellers img {
-  width: 90%;
+  width: 120px;
   margin: 8px 0;
+  height: 170px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
 }
 
 .best-sellers img:hover {
-  transform: scale(1.1);
-  transition: .3s;
+  transform: none;
 }
 
 .best-sellers p {
   margin: 0;
   margin-bottom: 8px;
-
+  text-align: center;
 }
 
 .best-sellers .price-book {
   font-weight: bold;
-  color: red;
-  float: left;
-  padding-left: 28px;
+  color: var(--primary-red);
+  float: none;
+  padding-left: 0;
 }
 
 .best-sellers .list-category {
@@ -445,7 +468,7 @@ header {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--bg-white);
   padding-top: 20px;
   margin-top: 20px;
   border-radius: 10px;
@@ -455,8 +478,11 @@ header {
   display: flex;
   margin-left: 32px;
   margin-right: 32px;
-  border-bottom: 1px solid #3333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light);
   font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-red-soft);
   text-transform: uppercase;
 }
 
@@ -472,11 +498,11 @@ header {
 .categories img {
   width: 100%;
   padding-bottom: 26px;
+  transition: transform 0.25s ease;
 }
 
 .categories img:hover {
-  transform: scale(1.1);
-  transition: .3s;
+  transform: none;
 }
 
 .categories li {
@@ -487,12 +513,12 @@ header {
 
 .categories a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-muted);
   font-weight: 100;
 }
 
 .categories a:hover {
-  color: red;
+  color: var(--primary-red);
 }
 
 
@@ -502,11 +528,23 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 20px 50px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.price-input {
+  width: 160px;
 }
 
 .logic-search-sort .inputx {
-  background-color: #fff;
-  border: 1px solid #333;
+  background-color: var(--bg-white);
+  border: 1px solid var(--text-muted);
   border-radius: 4px;
   font-size: 12px;
   line-height: 14px;
@@ -516,8 +554,8 @@ header {
 }
 
 .logic-search-sort .select-sort {
-  background-color: #fff;
-  border: 1px solid #333;
+  background-color: var(--bg-white);
+  border: 1px solid var(--text-muted);
   border-radius: 4px;
   font-size: 12px;
   line-height: 14px;
@@ -525,15 +563,32 @@ header {
   padding: 10px;
 }
 
+.book-empty {
+  margin: 10px 20px 20px;
+  padding: 18px;
+  border: 1px dashed var(--border-light);
+  border-radius: 8px;
+  color: var(--text-muted);
+  text-align: center;
+  background-color: var(--bg-white);
+}
+
+.toastify {
+  font-size: 15px;
+  padding: 24px 18px !important;
+  border-radius: 8px !important;
+  min-width: 260px;
+}
+
 .book-list {
   display: grid;
   grid-auto-rows: minmax(min-content, max-content);
-  grid-template-columns: repeat(5, minmax(0, 3fr));
-  grid-gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 20px;
   justify-content: space-between;
-  padding: 20px;
+  padding: 24px;
   list-style: none;
-  background-color: white;
+  background-color: var(--bg-white);
   border-radius: 10px;
 }
 
@@ -542,20 +597,20 @@ header {
 }
 
 .list-book {
-  background-color: white;
+  background-color: var(--bg-white);
   border-radius: 10px;
   margin-top: 20px;
 }
 
 .book-list a {
   text-decoration: none;
-  color: black;
+  color: var(--text-black);
 }
 
 .h2-book {
   margin-right: 32px;
   margin-left: 32px;
-  border-bottom: 1px solid #3333;
+  border-bottom: 1px solid var(--border-light);
   padding-top: 20px;
   font-size: 24px;
   text-transform: uppercase;
@@ -563,42 +618,52 @@ header {
 }
 
 .book {
-  border: 1px solid #d5eed5;
-  /* width: 100%; */
-  padding: 6px;
-  border-radius: 5px;
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  padding: 10px 10px 12px;
+  border-radius: 10px;
   font-size: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .book:hover {
-  border: 1px solid #000000;
+  border: 1px solid var(--primary-red);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .book img {
   width: 100%;
   border-radius: 5px;
-  height: 125px;
+  height: 200px;
   object-fit: contain;
+  background-color: var(--bg-white);
+  transition: transform 0.25s ease;
 }
 
 .book img:hover {
-  transform: scale(1.1);
-  transition: 0.3s
+  transform: none;
 }
 
 .book-title {
 
   margin: 10px 0;
+  font-weight: 600;
+  color: var(--text-black);
+  line-height: 1.3;
+  min-height: 40px;
 }
 
 .book-author {
   margin: 5px 0;
+  color: var(--text-muted);
+  font-size: 13px;
 }
 
 .book-price {
-  color: red;
+  color: var(--primary-red);
   font-weight: bold;
   font-size: 16px;
 
@@ -617,7 +682,7 @@ header {
 
 .book-review {
   margin-top: 20px;
-  background-color: white;
+  background-color: var(--bg-white);
   padding: 20px;
   border-radius: 10px;
 }
@@ -628,7 +693,7 @@ header {
 }
 
 .review {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-light);
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
@@ -646,7 +711,7 @@ header {
 }
 
 .review-date {
-  color: #666;
+  color: var(--text-muted);
 }
 
 .star-rating {
@@ -667,9 +732,9 @@ header {
 }
 
 .footer {
-  background-color: white;
+  background-color: var(--bg-white);
   margin-top: 20px;
-  color: black;
+  color: var(--text-black);
   /* height: 300px; */
   height: auto;
   width: 100%;
@@ -690,7 +755,7 @@ header {
 } */
 
 .footer-distributed {
-  background: white;
+  background: var(--bg-white);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   /* width: 70%; */
@@ -735,10 +800,10 @@ header {
   width: 36px;
   height: 36px;
   cursor: pointer;
-  background-color: #33383b;
+  background-color: var(--primary-red);
   border-radius: 2px;
   font-size: 20px;
-  color: white;
+  color: var(--bg-white);
   text-align: center;
   border-radius: 50%;
   line-height: 36px;
@@ -760,8 +825,8 @@ header {
 }
 
 .footer-distributed .footer-center i {
-  background-color: #33383b;
-  color: white;
+  background-color: var(--primary-red);
+  color: var(--bg-white);
   font-size: 20px;
   width: 35px;
   height: 35px;
@@ -776,13 +841,13 @@ header {
 
 .footer-distributed .footer-center p {
   display: inline-block;
-  color: black;
+  color: var(--text-black);
   font-size: 14px;
   font-weight: 400;
 }
 
 .footer-distributed .footer-center p a {
-  color: lightseagreen;
+  color: var(--primary-red);
   text-decoration: none;
   ;
 }
@@ -804,7 +869,7 @@ header {
   text-decoration: none;
   list-style: none;
   display: block;
-  color: black;
+  color: var(--text-black);
   padding: 10px 0;
 }
 
@@ -832,7 +897,7 @@ header {
 }
 
 .copy-right {
-  color: #222;
+  color: var(--text-muted);
   font-size: 14px;
   font-weight: normal;
   margin: 0;

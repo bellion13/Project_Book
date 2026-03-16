@@ -1,4 +1,4 @@
-/* Mobile: width < 740px */
+﻿/* Mobile: width < 740px */
 @media (max-width: 739px) {
     .banner-four {
         display: none;
@@ -26,7 +26,7 @@
     .header-mobile {
         display: flex;
         width: 100%;
-        background-color: #C92127;
+        background-color: var(--primary-red);
         align-items: center;
     }
 
@@ -112,7 +112,7 @@
 
     .nav__mobile ul li a:hover {
         color: #fff;
-        background-color: #C92127;
+        background-color: var(--primary-red);
     }
 
     .nav__mobile-icon {
@@ -120,7 +120,7 @@
         font-size: 20px;
         color: #fff;
         width: 100%;
-        background-color: #C92127;
+        background-color: var(--primary-red);
         display: block;
 
     }
@@ -203,6 +203,35 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .product__love .bg-white {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .detail-essential {
+        flex-direction: column;
+    }
+
+    .produc-detail {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .book-image img {
+        height: 320px;
+    }
+
+    .product-comments,
+    .product-view-detail,
+    .product__love,
+    .book-detail,
+    .main-cart,
+    .container-order,
+    .body-login,
+    .container-contact,
+    .container-about {
+        width: 100%;
+    }
 }
 
 /* Tablet: width >= 740px and width < 1024px */
@@ -213,5 +242,71 @@
 
     .categories ul {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .product__love .bg-white {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 739px) {
+    .book-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 16px;
+    }
+
+    .best-sellers ul {
+        padding: 8px 10px;
+    }
+
+    .categories ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 10px;
+    }
+
+    .logic-search-sort {
+        margin: 16px 10px;
+    }
+
+    .logic-search-sort .inputx,
+    .logic-search-sort .select-sort {
+        width: 100%;
+    }
+
+    .filter-price {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .price-input {
+        width: 100%;
+    }
+
+    .book-image img {
+        height: 260px;
+    }
+
+    .product__love .bg-white {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 16px 16px;
+    }
+
+    .checkout_products_item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .checkout_products_item_detail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .checkout_products_item_price,
+    .checkout_products_item_qty,
+    .checkout_products_item_total {
+        text-align: center;
+        min-width: auto;
     }
 }

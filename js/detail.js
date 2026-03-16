@@ -1,12 +1,16 @@
-
+﻿
 let string = window.location.href;
 let id = string.split("id=").pop();
 
-// fetch(`https://64036281302b5d671c4e05dc.mockapi.io/book/${id}`)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//   });
+function parsePrice(value) {
+  if (typeof value === "number") return value;
+  const digits = String(value || "").replace(/[^\d]/g, "");
+  return digits ? Number(digits) : 0;
+}
+
+function formatPrice(value) {
+  return Number(value).toLocaleString("vi-VN") + " đ";
+}
 const renderProductDetail = async (id) => {
   await fetch(`https://64036281302b5d671c4e05dc.mockapi.io/book/${id}`)
     .then((response) => response.json())
@@ -38,7 +42,7 @@ const renderProductDetail = async (id) => {
                   </div>
                 </div>
                 <div class="book-price-detail">
-                  <span>${product.price}</span>
+                  <span>${formatPrice(parsePrice(product.price))}</span>
                 </div>
                 <div class="product-quantity">
                     <label class="number-qty" for="qty">Số lượng:</label>
@@ -215,5 +219,15 @@ handleCreatePrdCart();
     let  name = document.querySelector(".add-to-cart-button").name;
     shoppingCart.addItemToCart(name, price, 1, id, img);
     displayCart();
+    if (typeof Toastify === "function") {
+      Toastify({
+        text: "Đã thêm vào giỏ hàng",
+        duration: 2000,
+        gravity: "top",
+        position: "right",
+        close: false,
+        backgroundColor: "#2E7D32",
+      }).showToast();
+    }
   }
 

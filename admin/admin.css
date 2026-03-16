@@ -1,3 +1,9 @@
+﻿
+.admin-body {
+  background-color: #f3f3f3;
+  margin: 0;
+  min-height: 100vh;
+}
 
 .header {
   width: 100%;
@@ -5,15 +11,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 0px 10px 0px rgba(0,0 ,0 ,0.4);
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding-right: 20px;
 }
 .logo-admin {
-  padding: 20px;
-  padding: 20px 20px 20px 50px;
-  font-size: 30px;
+  padding: 16px 20px 16px 50px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #c92127;
 }
 .input__admin {
-  width: 30%;
+  width: 34%;
 }
 .form-control {
   width: 100%;
@@ -35,14 +44,14 @@
   display: block;
     padding: 10px 30px;
     text-transform: uppercase;
-    color: black;
+    color: #111111;
     text-decoration: none;
-    line-height: 80px;
+    line-height: 60px;
     
 }
 .nav ul li a:hover {
-  background-color: rgb(214, 45, 144);
-  color: white;
+  background-color: #c92127;
+  color: #ffffff;
 }
 .img-admin {
   margin-right: 30px;
@@ -50,27 +59,40 @@
   align-items: center;
   /* line-height: 80px; */
 }
+.img-admin .profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
 .img-admin img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+.profile-name {
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.5px;
+  font-size: 12px;
 }
 .logout {
   /* display: none; */
   /* line-height: 80px; */
   margin-left: 20px;
   font-size: 15px;
-  background-color: rgb(241, 72, 72);
+  background-color: #c92127;
   padding: 10px;
   border-radius: 5px;
 
 }
 .logout:hover  {
-  background-color: rgb(226, 54, 54);
+  background-color: #a70a27;
 
 }
 .logout a {
-  color: white;
+  color: #ffffff;
   /* text-decoration: none; */
 }
 
@@ -80,8 +102,161 @@
   line-height: 30px;
 }
 
+.action-btns {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-view {
+  background-color: #2e7d32;
+}
+
+.btn-update {
+  background-color: #f9a825;
+  color: #ffffff;
+}
+
+.btn-delete {
+  background-color: #c92127;
+}
+
 .form-control {
   max-width: 570px;
+}
+
+#main {
+  width: 100%;
+  margin: 20px auto 40px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 10px 14px 20px;
+}
+
+.table > thead > tr > th {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: 700;
+}
+
+.btn-add {
+  margin: 16px auto 0;
+  display: block;
+  background-color: #c92127;
+  border-color: #c92127;
+}
+
+.btn-add:hover {
+  background-color: #a70a27;
+  border-color: #a70a27;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.view-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 16px;
+}
+
+.view-item {
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.view-item strong {
+  display: block;
+  color: #111111;
+  margin-bottom: 4px;
+}
+
+.view-desc {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.view-media {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.view-image {
+  width: 120px;
+  height: 160px;
+  object-fit: contain;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .view-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 739px) {
+  .view-grid {
+    grid-template-columns: 1fr;
+  }
+  .view-media {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .logo-admin {
+    padding: 10px 12px;
+  }
+  .input__admin {
+    width: 100%;
+  }
+  .nav__list {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .nav ul li a {
+    line-height: 40px;
+  }
+  .img-admin {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0 0 10px;
+  }
+  .btn-add {
+    width: 100%;
+    max-width: 260px;
+  }
 }
 
 tbody td:nth-child(7) {

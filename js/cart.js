@@ -1,16 +1,26 @@
-
+﻿
 let cart;
 var shoppingCart = (function () {
   cart = [];
 
   // Constructor
   function Item(name, price, count, id, img) {
-    // console.log(name, price, count,id);
+    const priceNumber = parsePrice(price);
     this.name = name;
-    this.price = price;
+    this.price = priceNumber;
     this.count = count;
     this.id = id;
     this.img = img;
+  }
+
+  function parsePrice(value) {
+    if (typeof value === "number") return value;
+    const digits = String(value || "").replace(/[^\d]/g, "");
+    return digits ? Number(digits) : 0;
+  }
+
+  function formatPrice(value) {
+    return Number(value).toLocaleString("vi-VN") + " đ";
   }
 
   // Save cart
@@ -63,7 +73,7 @@ var shoppingCart = (function () {
   obj.totalCart = function () {
     var totalCart = 0;
     for (var item in cart) {
-      totalCart += cart[item].price * cart[item].count;
+      totalCart += parsePrice(cart[item].price) * cart[item].count;
     }
     return Number(totalCart.toFixed(2));
   };
@@ -97,11 +107,13 @@ var shoppingCart = (function () {
       item = cart[i];
       itemCopy = {};
       for (p in item) {
-        itemCopy[p] = item[p];
-      }
-      itemCopy.total = Number(item.price * item.count).toFixed(2);
-      cartCopy.push(itemCopy);
+      itemCopy[p] = item[p];
     }
+    itemCopy.total = Number(parsePrice(item.price) * item.count).toFixed(2);
+    itemCopy.priceNumber = parsePrice(item.price);
+    itemCopy.totalNumber = parsePrice(item.price) * item.count;
+    cartCopy.push(itemCopy);
+  }
     console.log(cartCopy);
     return cartCopy;
   };
@@ -109,22 +121,53 @@ var shoppingCart = (function () {
   return obj;
 })();
 
+function showToast(message, type = "success") {
+  if (typeof Toastify !== "function") return;
+  const colors = {
+    success: "#2E7D32",
+    warning: "#F9A825",
+    error: "#C92127",
+  };
+  Toastify({
+    text: message,
+    duration: 2000,
+    gravity: "top",
+    position: "right",
+    close: false,
+    backgroundColor: colors[type] || colors.success,
+  }).showToast();
+}
+
 // render ra màn hình
 function displayCart() {
-  updateCartCount();
   var cartArray = shoppingCart.listCart();
   const listProductCart = document.querySelector(".list-product-cart");
   const total = document.querySelector(".total-price-number");
+  const emptyState = document.querySelector(".cart-empty");
+  const summaryBlocks = document.querySelectorAll(".cart-summary");
+  updateCartCount();
+  if (!listProductCart || !total) {
+    return;
+  }
 
- 
+  if (emptyState) {
+    emptyState.style.display = cartArray.length === 0 ? "block" : "none";
+  }
+  if (summaryBlocks && summaryBlocks.length) {
+    const showSummary = cartArray.length > 0;
+    summaryBlocks.forEach((el) => {
+      el.style.display = showSummary ? "block" : "none";
+    });
+  }
+
   cartArray.map((e) => console.log(e));
   let totalNumber = 0;
 
   for (i of cartArray) {
-    totalNumber+=parseInt(i.total)
+    totalNumber += parseInt(i.totalNumber || i.total, 10) || 0;
   }
-  total.innerHTML = totalNumber
-  listProductCart.innerHTML = cart.map((dataProduct) => {
+  total.innerHTML = Number(totalNumber).toLocaleString("vi-VN") + " đ";
+  listProductCart.innerHTML = cartArray.map((dataProduct) => {
     console.log(dataProduct.img);
     return `
     <tr class="box-container">
@@ -135,10 +178,10 @@ function displayCart() {
     <div class="input-group">
       <button class="quantity-btn minus-btn" onclick=remove1Cart(${dataProduct.id})>-</button>
       <input type="number" class="quantity-input" value=${dataProduct.count}>
-      <button class="quantity-btn plus-btn"  name="${dataProduct.name}" id="item_${dataProduct.id}" onclick=add1Cart(${dataProduct.price},${dataProduct.id},"${dataProduct.img}")>+</button>
+      <button class="quantity-btn plus-btn"  name="${dataProduct.name}" id="item_${dataProduct.id}" onclick=add1Cart(${dataProduct.priceNumber || dataProduct.price},${dataProduct.id},"${dataProduct.img}")>+</button>
       </div>
       </div></td>
-      <td class="pricee">${dataProduct.price}</td>
+      <td class="pricee">${Number(dataProduct.priceNumber || dataProduct.price).toLocaleString("vi-VN")} đ</td>
       <td><button class="delete" onclick =removeCart(${dataProduct.id})>Xóa</button></td>
       </tr> 
       `;
@@ -153,23 +196,31 @@ function add1Cart(price, id, img) {
   let name = document.querySelector(`#item_${id}`).name;
   shoppingCart.addItemToCart(name, price, 1, id, img);
   displayCart();
+  showToast("Đã tăng số lượng", "success");
 }
 // trừ số lượng
 function remove1Cart(id) {
   shoppingCart.removeItemFromCart(id);
   displayCart();
+  showToast("Đã giảm số lượng", "warning");
 }
 // xoá
 function removeCart(id) {
   shoppingCart.removeItemFromCartAll(id);
   displayCart();
+  showToast("Đã xoá sản phẩm", "error");
 }
 
 
 function updateCartCount() {
   var cartCountElem = document.querySelector(".cart-count");
-  cartCountElem.innerHTML = cart.length;
-  if (cart.length > 0) {
+  if (!cartCountElem) return;
+  var totalCount = 0;
+  for (var item in cart) {
+    totalCount += cart[item].count;
+  }
+  cartCountElem.innerHTML = totalCount;
+  if (totalCount > 0) {
     cartCountElem.style.display = "inline-block";
   } else {
     cartCountElem.style.display = "none";

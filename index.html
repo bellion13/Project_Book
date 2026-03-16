@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../img/logo/logo.webp">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -302,8 +303,12 @@
         <!-- tìm kiếm theo tên -->
         <input class="inputx" type="text" name="search" value="" id="searchh" placeholder="Tìm kiếm..."
           autocomplete="off">
+        <div class="filter-price">
+          <input class="inputx price-input" type="number" id="price-min" placeholder="Giá từ" min="0">
+          <input class="inputx price-input" type="number" id="price-max" placeholder="Giá đến" min="0">
+        </div>
         <!-- sắp xếp theo A - Z -->
-        <select class="select-sort" onchange="sort()" name="" id="sort">
+        <select class="select-sort" name="" id="sort">
           <option value="0">
             Sắp xếp theo
           </option>
@@ -313,11 +318,18 @@
           <option value="2">
             Sắp xếp từ Z - A
           </option>
+          <option value="3">
+            Giá tăng dần
+          </option>
+          <option value="4">
+            Giá giảm dần
+          </option>
         </select>
       </div>
       <ul class="book-list">
         <!-- api home -->
       </ul>
+      <div class="book-empty" style="display: none;">Không tìm thấy sách phù hợp</div>
       <!-- phân trang -->
       <div class="pagination">
         <a href="#" class="prev">&laquo;</a>
@@ -393,12 +405,12 @@
 
         <div>
           <i class="fa fa-phone"></i>
-          <p><a href="tel:082672045">0826726045</a></p>
+          <p><a href="tel:19001234">1900 1234</a></p>
         </div>
 
         <div>
           <i class="fa fa-envelope"></i>
-          <p><a href="mailto:ttai132002@gmail.com">ttai132002@gmail.com</a></p>
+          <p><a href="mailto:support@bookshop.vn">support@bookshop.vn</a></p>
         </div>
       </div>
       <div class="footer-right">
@@ -414,7 +426,12 @@
       </div>
     </div>
   </footer>
-  <div class="copy-right">Ber © 2023 – All Rights Reserved</div>
+  <div class="copy-right">Ber © <span class="current-year"></span> – All Rights Reserved</div>
+  <script>
+    document.querySelectorAll(".current-year").forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
 
   <!-- link js -->
   <script src="./js/script.js"></script>

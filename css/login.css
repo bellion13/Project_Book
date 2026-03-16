@@ -1,9 +1,11 @@
-.body-login {
+﻿.body-login {
   display: flex;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     background-color: white;
-    margin-top: 15px;
+    margin: 15px auto 0;
     justify-content: center;
+    padding: 0 10px 10px;
 }
 
 .container {
@@ -40,9 +42,14 @@
   padding: 0 15px;
   font-size: 15px;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-light);
   border-radius: 6px;
   outline: none;
+}
+
+.input-error {
+  border-color: var(--primary-red) !important;
+  outline-color: var(--primary-red) !important;
 }
 
 .form input:focus {
@@ -51,7 +58,7 @@
 
 .form a {
   font-size: 15px;
-  color: #bb1d1d;
+  color: var(--primary-red);
   text-decoration: none;
 }
 
@@ -60,8 +67,8 @@
 }
 
 .form input.button {
-  color: #fff;
-  background: #e42e2e;
+  color: var(--bg-white);
+  background: var(--primary-red);
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -71,7 +78,7 @@
 }
 
 .form input.button:hover {
-  background: #b61111;
+  background: var(--primary-red-strong);
 }
 
 .social-media-login {
@@ -80,13 +87,13 @@
 }
 
 .social-fb {
-  background-color: #4C66A4;
+  background-color: var(--primary-red);
   border-radius: 6px;
   margin-bottom: 12px;
 }
 
 .social-fb a i {
-  color: #FFFFFF;
+  color: var(--bg-white);
   padding: 15px 15px;
   font-size: 19px;
   width: 100%;
@@ -109,18 +116,18 @@
 }
 
 .social-fb a i:hover {
-  background-color: #315097;
+  background-color: var(--primary-red-strong);
   border-radius: 6px;
 }
 
 .social-gg {
-  background-color: #CC3E2F;
-  color: #FFFFFF;
+  background-color: var(--primary-red);
+  color: var(--bg-white);
   border-radius: 6px;
 }
 
 .social-gg a i {
-  color: #FFFFFF;
+  color: var(--bg-white);
   padding: 15px 15px;
   font-size: 19px;
   width: 100%;
@@ -128,7 +135,7 @@
 }
 
 .social-gg a i:hover {
-  background-color: #be2c1b;
+  background-color: var(--primary-red-strong);
   border-radius: 6px;
 }
 
@@ -138,7 +145,7 @@
 }
 
 .signup label {
-  color: #e42e2e;
+  color: var(--primary-red);
   cursor: pointer;
 }
 
